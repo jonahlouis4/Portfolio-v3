@@ -7,7 +7,7 @@ import { GithubOutlined, ExportOutlined } from '@ant-design/icons';
 
 const { Meta } = Card;
 
-const ProjectDisplay = ({iconName, projectName, description}) => {
+const ProjectDisplay = ({iconName, projectName, description, github, url}) => {
     
     function iconDisplay() {
         if (iconName === "faReact") {
@@ -21,8 +21,8 @@ const ProjectDisplay = ({iconName, projectName, description}) => {
         <Card
         hoverable
         actions={[
-            <GithubOutlined key="github" />,
-            <ExportOutlined key="url" />
+            <a href={github} target="_blank"><GithubOutlined key="github" /></a>,
+            <a href={url} target="_blank"><ExportOutlined key="url" /></a>
             ]}
         >
             <div 

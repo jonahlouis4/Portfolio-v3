@@ -16,9 +16,11 @@ const sectionTitle = {
 const Projects = () => {
     const [projects] = useState([
         {iconName: "faReact", projectName: "StudyBuddy", 
-            description: "A simple flash card web application designed for studying." },
+            description: "A simple flash card web application designed for studying.", 
+            github: "https://github.com/jonahlouis4/StudyBuddy", url:"https://jonahlouis4.github.io/StudyBuddy/" },
         {iconName: "faPhp", projectName: "Portfolio v2", 
-            description: "The second version of my personal portfolio."  },
+            description: "The second version of my personal portfolio.",
+            github: "https://github.com/jonahlouis4/Portfolio-v2", url:"https://jonahlouis.ca/"  },
     ])
 
     return (
@@ -35,25 +37,29 @@ const Projects = () => {
            >
                <Row 
                justify="center"
-               gutter={[16, { sm: 0, md: 16, lg: 32, xl: 32 }]}
+               gutter={[64, 32]}
                className="projects-row"
                >
                    {/* Card 1 */}
                     <Col 
-                    xs={{span:24}} sm={{span:24}} md={{span:12}} lg={{span:8}} xl={{span:8}}>
+                    xs={{span:24}} sm={{span:24}} md={{span:12}} lg={{span:10}} xl={{span:9}}>
                         <ProjectDisplay 
                         iconName={projects[0].iconName} 
                         projectName={projects[0].projectName}
                         description={projects[0].description}
+                        github={projects[0].github}
+                        url={projects[0].url}
                         />
                     </Col>
                     {/* ProjectDisplay 2 */}
                     <Col 
-                    xs={{span:24}} sm={{span:24}} md={{span:12}} lg={{span:8}} xl={{span:8}}>
+                    xs={{span:24}} sm={{span:24}} md={{span:12}} lg={{span:10}} xl={{span:9}}>
                         <ProjectDisplay 
                         iconName={projects[1].iconName}
                         projectName={projects[1].projectName}
                         description={projects[1].description}
+                        github={projects[1].github}
+                        url={projects[1].url}
                         />
                     </Col>
                </Row>

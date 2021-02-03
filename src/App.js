@@ -8,7 +8,7 @@ import Projects from './components/Projects'
 
 function App() {
   /** Contains the section names for the navigation */
-  const [sectionName] = useState({section1: "Section 1", section2: "Section 2", section3: "Section 3"})
+  const [sectionName] = useState({section1: "Projects", section2: "Section 2", section3: "Section 3"})
   /** Determines wether the side navigation is opened (isOpen = true), or closed (isOpen = false) */
   const [isOpen, setIsOpen] = useState(false);
 
