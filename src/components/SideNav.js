@@ -1,6 +1,10 @@
 import React from 'react'
 import './SideNav.css'
+
+import { Typography } from 'antd'
 import { CloseOutlined } from '@ant-design/icons'
+
+const { Text } = Typography;
 
 const sideNavStyle = {
     height: '100%',
@@ -8,7 +12,8 @@ const sideNavStyle = {
     zIndex: '1',
     top: '0',
     right: '0',
-    backgroundColor: '#141414',
+    backgroundColor: 'white',
+    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
     overflowX: 'hidden',
     transition: '0.5s',
     paddingTop: '60px',
@@ -46,9 +51,9 @@ const SideNav = ({isOpen, sideNavControl, sectionName}) => {
     return (
         <div style={sideNavStyle} className={isOpen ? navOpenClass : navCloseClass}>
             <a><CloseOutlined style={closeBtn} onClick={navControl} className="options"/></a>
-            <a href="#" className="options">{sectionName.section1}</a>
-            <a href="#" className="options">{sectionName.section2}</a>
-            <a href="#" className="options">{sectionName.section3}</a>
+            <a href="#"><Text type="secondary" className="options">{sectionName.section1}</Text></a>
+            <a href="#"><Text type="secondary" className="options">{sectionName.section2}</Text></a>
+            <a href="#"><Text type="secondary" className="options">{sectionName.section3}</Text></a>
         </div>
     )
 }
