@@ -44,7 +44,9 @@ const Introduction = () => {
                     >
                         <Space size="small">
                             <Button >Start a project</Button>
-                            <a href="https://github.com/jonahlouis4" target="_blank"><GithubOutlined style={{fontSize: '25px' }}/></a>
+                            <a href="https://github.com/jonahlouis4" target="_blank">
+                                <Button shape="circle" icon={<GithubOutlined />} />
+                            </a>
                         </Space>
                         
                     </div>
