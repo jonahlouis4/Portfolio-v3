@@ -1,0 +1,63 @@
+@import '~antd/dist/antd.less';
+
+@font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+  'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji';
+/* 
+======= UNIVERSAL BACKGROUND =======
+*/
+.container-bg {
+    background: linear-gradient(to top,#0050b3 0%, #1890ff 100%);
+}
+
+/* 
+======= UNIVERSAL CSS FOR RESPONSIVENESS =======
+*/
+
+/* Main Container */
+.container { width: 1000px; margin: 0 auto;}
+/* Main Nav bar */
+.nav { width: 1000px; margin: auto; }
+    .section-menu { display: none;}
+/* Side Navigation */
+.sideNav-open { width: 250px; }
+.sideNav-close { width: 0px; }
+
+/* xs */
+@media only screen and (max-width: 576px) {
+    .container { width: 95%; }
+    .nav { width: 95%; }
+        .section-sections.sLink { display: none; }
+        .section-menu { display: block;}
+    .introduction-container { margin: 100px 0 !important; text-align: center; }
+        .intro-picture { padding-top: 50px; }
+}
+
+/* sm */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .container { width: 550px; }
+    .nav { width: 550px; }
+        .section-sections.sLink { display: none; }
+        .section-menu { display: block;}
+    .introduction-container { margin: 150px 0 !important; text-align: center; }
+        .intro-picture { padding-top: 50px; }
+}
+
+/* md */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .container { width: 650px; }
+    .nav { width: 650px; }
+    .sideNav-open { width: 0; }
+}
+
+/* lg */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .container { width: 850px; }
+    .nav { width: 850px; }
+    .sideNav-open { width: 0; }
+}
+
+/* xl */
+@media only screen and (min-width: 1201px) {
+    .sideNav-open { width: 0; }
+}

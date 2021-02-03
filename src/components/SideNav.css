@@ -1,0 +1,15 @@
+/* Sections/options */
+.options { 
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+    .options:hover {
+        color: #f1f1f1 !important;
+    }
+    #close-btn:hover {
+        color: #f1f1f1;
+    }
