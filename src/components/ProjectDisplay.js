@@ -11,9 +11,11 @@ const ProjectDisplay = ({iconName, projectName, description, github, url}) => {
     
     function iconDisplay() {
         if (iconName === "faReact") {
-            return <FontAwesomeIcon icon={faReact} size="6x" />
+            // Color = #00d8ff
+            return <FontAwesomeIcon icon={faReact} size="6x"/>
         } else if (iconName === "faPhp") {
-            return <FontAwesomeIcon icon={faPhp} size="6x" />
+            // Color = #8993be
+            return <FontAwesomeIcon icon={faPhp} size="6x" style={{}}/>
         }
     }
 
