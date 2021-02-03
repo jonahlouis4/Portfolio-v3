@@ -40,7 +40,7 @@ const Introduction = () => {
                     <Avatar
                         size={{ xs: 180, sm: 180, md: 180, lg: 180, xl: 220, xxl: 250 }}
                         src={user}
-                    />,
+                    />
                 </Col>
             </Row> 
         </div>

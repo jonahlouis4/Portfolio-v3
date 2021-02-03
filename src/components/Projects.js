@@ -15,9 +15,10 @@ const sectionTitle = {
 
 const Projects = () => {
     const [projects] = useState([
-        {iconName: "faReact", projectName: "StudyBuddy", description: "A simple flash card web application designed for studying." },
-        {iconName: "faReact", projectName: "Portfolio v2", description: "The second version of my personal portfolio made in order to demonstrate my personal projects."  },
-        {iconName: "faWordpress", projectName: "Overhaul.design", description: "Develop & maintan websites for our web agency business." }
+        {iconName: "faReact", projectName: "StudyBuddy", 
+            description: "A simple flash card web application designed for studying." },
+        {iconName: "faPhp", projectName: "Portfolio v2", 
+            description: "The second version of my personal portfolio."  },
     ])
 
     return (
@@ -32,9 +33,14 @@ const Projects = () => {
            <div
            style={{paddingTop: '50px'}}
            >
-               <Row glutter={14}>
+               <Row 
+               justify="center"
+               gutter={[16, { sm: 0, md: 16, lg: 32, xl: 32 }]}
+               className="projects-row"
+               >
                    {/* Card 1 */}
-                    <Col span={8}>
+                    <Col 
+                    xs={{span:24}} sm={{span:24}} md={{span:12}} lg={{span:8}} xl={{span:8}}>
                         <ProjectDisplay 
                         iconName={projects[0].iconName} 
                         projectName={projects[0].projectName}
@@ -42,19 +48,12 @@ const Projects = () => {
                         />
                     </Col>
                     {/* ProjectDisplay 2 */}
-                    <Col span={8}>
+                    <Col 
+                    xs={{span:24}} sm={{span:24}} md={{span:12}} lg={{span:8}} xl={{span:8}}>
                         <ProjectDisplay 
                         iconName={projects[1].iconName}
                         projectName={projects[1].projectName}
                         description={projects[1].description}
-                        />
-                    </Col>
-                    {/* ProjectDisplay 3 */}
-                    <Col span={8}>
-                        <ProjectDisplay 
-                        iconName={projects[2].iconName}
-                        projectName={projects[2].projectName}
-                        description={projects[2].description}
                         />
                     </Col>
                </Row>
