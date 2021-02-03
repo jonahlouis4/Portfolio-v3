@@ -1,8 +1,10 @@
 import React from 'react'
-import { Row, Col, Typography, Button, Avatar } from 'antd'
+
+import { Row, Col, Typography, Button, Avatar, Space } from 'antd'
+import { GithubOutlined } from '@ant-design/icons'
 import user from '../images/jonah.jpg'
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 const headerTitle = {
     fontSize: '56px',
@@ -37,7 +39,16 @@ const Introduction = () => {
                     <Title level={3} style={subHeaderTitle} type="secondary">
                         I love to <span style={colorFont}>learn</span>, <span style={colorFont}>build</span>, and <span style={colorFont}>innovate</span> things for the web.
                     </Title>
-                    <Button style={{marginTop: '10px'}} >Start a project</Button>
+                    <div
+                    style={{marginTop: '10px'}}
+                    >
+                        <Space size="small">
+                            <Button >Start a project</Button>
+                            <a href="https://github.com/jonahlouis4" target="_blank"><GithubOutlined style={{fontSize: '25px' }}/></a>
+                        </Space>
+                        
+                    </div>
+                    
                 </Col>
                 <Col 
                 xl={6} 
