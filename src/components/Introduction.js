@@ -17,6 +17,11 @@ const subHeaderTitle = {
     padding: '0'
 }
 
+const colorFont = {
+    color: '#1890ff',
+    fontWeight: '500'
+}
+
 const Introduction = () => {
     return (
         <div
@@ -28,8 +33,10 @@ const Introduction = () => {
                 xl={18} 
                 style={{ margin:'auto'}}
                 >
-                    <Title style={headerTitle}>I'm Jonah.</Title>
-                    <Title level={3} style={subHeaderTitle} type="secondary">Lorem ipsum dolor sit amet, consectetur.</Title>
+                    <Title style={headerTitle}>I'm Jonah,</Title>
+                    <Title level={3} style={subHeaderTitle} type="secondary">
+                        I love to <span style={colorFont}>learn</span>, <span style={colorFont}>build</span>, and <span style={colorFont}>innovate</span> things for the web.
+                    </Title>
                     <Button style={{marginTop: '10px'}} >Start a project</Button>
                 </Col>
                 <Col 
