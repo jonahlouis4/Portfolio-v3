@@ -23,6 +23,19 @@ const Projects = () => {
             github: "https://github.com/jonahlouis4/Portfolio-v2", url:"https://jonahlouis.ca/"  },
     ])
 
+    const cardDisplay = projects.map(project => { return (
+        <Col 
+        xs={{span:24}} sm={{span:24}} md={{span:12}} lg={{span:10}} xl={{span:9}}>
+            <ProjectDisplay 
+            iconName={project.iconName} 
+            projectName={project.projectName}
+            description={project.description}
+            github={project.github}
+            url={project.url}
+            />
+        </Col>
+    )})
+
     return (
         <div
         style={{color: 'white', padding: '100px 0'}}
@@ -40,28 +53,8 @@ const Projects = () => {
                gutter={[64, 32]}
                className="projects-row"
                >
-                   {/* Card 1 */}
-                    <Col 
-                    xs={{span:24}} sm={{span:24}} md={{span:12}} lg={{span:10}} xl={{span:9}}>
-                        <ProjectDisplay 
-                        iconName={projects[0].iconName} 
-                        projectName={projects[0].projectName}
-                        description={projects[0].description}
-                        github={projects[0].github}
-                        url={projects[0].url}
-                        />
-                    </Col>
-                    {/* ProjectDisplay 2 */}
-                    <Col 
-                    xs={{span:24}} sm={{span:24}} md={{span:12}} lg={{span:10}} xl={{span:9}}>
-                        <ProjectDisplay 
-                        iconName={projects[1].iconName}
-                        projectName={projects[1].projectName}
-                        description={projects[1].description}
-                        github={projects[1].github}
-                        url={projects[1].url}
-                        />
-                    </Col>
+                   {/* Display all cards */}
+                  {cardDisplay}
                </Row>
            </div>
         </div>
