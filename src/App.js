@@ -5,10 +5,12 @@ import Header from './components/Header'
 import SideNav from './components/SideNav'
 import Introduction from './components/Introduction'
 import Projects from './components/Projects'
+import Technologies from './components/Technologies'
+import Footer from './components/Footer'
 
 function App() {
   /** Contains the section names for the navigation */
-  const [sectionName] = useState({section1: "Projects", section2: "Section 2", section3: "Section 3"})
+  const [sectionName] = useState({section1: "Projects", section2: "Skills", section3: "Section 3"})
   /** Determines wether the side navigation is opened (isOpen = true), or closed (isOpen = false) */
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,22 +27,20 @@ function App() {
       <SideNav isOpen={isOpen} sideNavControl={sideNavControl} sectionName={sectionName} />
       <Header isOpen={isOpen} sideNavControl={sideNavControl} sectionName={sectionName} />
       {/* Section - Introduction */}
-      <div 
-      className="container"
-      >
+      <div className="container">
         <Introduction />
       </div>
       {/* Section - Projects */}
-      <div 
-      className="container-bg"
-      >
-        <div 
-        className="container container-cnt"
-        >
+      <div id="container-bg-1">
+        <div className="container">
           <Projects />
         </div>
       </div>
-
+      {/* Section - Technologies */}
+      <div className="container">
+        <Technologies />
+        <Footer />
+      </div>
     </>
   );
 }

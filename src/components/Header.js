@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Header.css'
 import { Typography, Space } from 'antd'
 import { MenuOutlined } from '@ant-design/icons'
+import logo from '../images/logo_home.jpg'
 
 const { Title } = Typography
 
@@ -10,7 +11,7 @@ const navContainer = {
     display: 'inline-block',
     margin: '0 auto',
     boxShadow: '0 0 1px 0 rgba(0, 0, 0, 0.1), 0 0 12px 0 rgba(0, 0, 0, 0.1)',
-    padding: '15px',
+    padding: '0',
 }
 
 const sectionContainer = {
@@ -21,7 +22,7 @@ const sectionContainer = {
 const homeLink = { 
     float: 'left',
     margin: '0',
-    padding: '0',
+    padding: '0'
 }
 
 const menuIcon = {
@@ -31,7 +32,7 @@ const menuIcon = {
 const sections = {
     fontSize: '16px',
     fontWeight: '100',
-    marginTop: '6px'
+    marginTop: '20px'
 }
 
 const Header = ({isOpen, sideNavControl, sectionName}) => {
@@ -49,7 +50,7 @@ const Header = ({isOpen, sideNavControl, sectionName}) => {
             <div 
             className="nav"
             >
-                <a href="#"><Title level={3} style={homeLink}>Logo</Title></a>
+                <a href="#" style={homeLink}><img src={logo} width='70'/></a>
                 <div
                 style={sectionContainer}
                 >
