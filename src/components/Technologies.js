@@ -34,19 +34,19 @@ const Technologies = () => {
     /** Holds all the languages */
     const [languages] = useState([
         {id:1,name:"HTML"},
-        {id:1,name:"CSS"},
-        {id:1,name:"PHP"},
-        {id:1,name:"Java"},
-        {id:1,name:"C/C++"},
+        {id:2,name:"CSS"},
+        {id:3,name:"PHP"},
+        {id:4,name:"Java"},
+        {id:5,name:"C/C++"},
     ])
 
     /** Holds all the frameworks */
     const [frameworks] = useState([
         {id:1, name:"Angular"},
-        {id:1, name:"Gatsby"},
-        {id:2,name:"Ionic"},
-        {id:3,name:"Java FX"},
-        {id:4,name:"Java Swing"},
+        {id:2, name:"Gatsby"},
+        {id:3,name:"Ionic"},
+        {id:4,name:"Java FX"},
+        {id:5,name:"Java Swing"},
     ])
 
     /**
@@ -67,14 +67,13 @@ const Technologies = () => {
 
     /** Displays all 'top' technologies */
     const topTechDisplay = technologies.map(tech => { return (
-        <div 
+        <Col
+        xs={{span:12}} sm={{span:12}} md={{span:6}} lg={{span:6}} xl={{span:6}}
         key={tech.id}
         >
-            <Col>
-                {logoDisplay(tech.name)}
-                <Title level={5}>{ tech.name }</Title>
-            </Col>
-        </div>
+            {logoDisplay(tech.name)}
+            <Title level={5}>{ tech.name }</Title>
+        </Col>
     )})
     
     /** Displays all frameworks */
