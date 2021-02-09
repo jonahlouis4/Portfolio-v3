@@ -24,7 +24,7 @@ const Technologies = () => {
                 <Title style={sectionTitle}><span style={{fontWeight: '500'}}>Technologies</span> I've been working with</Title>
             </div>
             <div
-            style={{paddingTop:'50px'}}
+            style={{paddingTop:'50px', border: '1px solid red'}}
             >
 
             </div>

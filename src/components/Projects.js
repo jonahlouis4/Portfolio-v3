@@ -27,7 +27,7 @@ const Projects = () => {
     /** Card format for each project */
     const cardDisplay = projects.map(project => { return (
         <Col 
-        xs={{span:24}} sm={{span:24}} md={{span:12}} lg={{span:10}} xl={{span:12}}>
+        xs={{span:24}} sm={{span:24}} md={{span:11}} lg={{span:11}} xl={{span:11}}>
             <ProjectDisplay 
             iconName={project.iconName} 
             projectName={project.projectName}
@@ -40,7 +40,7 @@ const Projects = () => {
 
     return (
         <div
-        style={{padding:'100px 0'}}
+        style={{padding:'100px 0', border: '1px solid red'}}
         >
             <div
             style={{textAlign: 'center'}}
@@ -51,9 +51,8 @@ const Projects = () => {
            style={{paddingTop: '50px'}}
            >
                <Row 
-               justify="center"
-               gutter={[64, 32]}
-               className="projects-row"
+               justify="space-between"
+               gutter={[0, 48]}
                >
                    {/* Display all cards */}
                   {cardDisplay}

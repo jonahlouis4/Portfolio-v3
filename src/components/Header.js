@@ -22,12 +22,12 @@ const sectionContainer = {
 const homeLink = { 
     float: 'left',
     margin: '0',
-    padding: '0'
+    padding: '0',
 }
 
 const menuIcon = {
     fontSize: '25px',
-    marginTop: '20px'
+    marginTop: '22px'
 }
 
 const sections = {
