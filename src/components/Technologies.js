@@ -14,6 +14,14 @@ const sectionTitle = {
     padding: '0'
 }
 
+const logoColorDefault = {
+    color:'#434343'
+}
+
+const carretColor = {
+    color: '#1890ff'
+}
+
 const Technologies = () => {
     /** Contains all top tech. names */
     const [technologies] = useState([
@@ -47,13 +55,13 @@ const Technologies = () => {
      */
     const logoDisplay = (name) => {
         if (name === technologies[0].name) {
-            return <FontAwesomeIcon icon={faJsSquare} size="6x" style={{color:"#434343"}}/>
+            return <FontAwesomeIcon icon={faJsSquare} size="6x" style={logoColorDefault}/>
         } else if (name === technologies[1].name) {
-            return <FontAwesomeIcon icon={faReact} size="6x" style={{color:"#434343"}}/>
+            return <FontAwesomeIcon icon={faReact} size="6x" style={logoColorDefault}/>
         } else if (name === technologies[2].name) {
-            return <FontAwesomeIcon icon={faWordpress} size="6x" style={{color:"#434343"}}/>
+            return <FontAwesomeIcon icon={faWordpress} size="6x" style={logoColorDefault}/>
         } else if (name === technologies[3].name) {
-            return <FontAwesomeIcon icon={faBootstrap} size="6x" style={{color:"#434343"}}/>
+            return <FontAwesomeIcon icon={faBootstrap} size="6x" style={logoColorDefault}/>
         }
     }
 
@@ -74,7 +82,7 @@ const Technologies = () => {
         <div
         key={framework.id}
         >
-            <CaretRightOutlined />
+            <CaretRightOutlined style={carretColor}/>
             <Text>{ framework.name }</Text><br />
         </div>
  
@@ -85,7 +93,7 @@ const Technologies = () => {
         <div
         key={language.id}
         >
-            <CaretRightOutlined />
+            <CaretRightOutlined style={carretColor}/>
             <Text>{ language.name }</Text><br />
         </div>
  
@@ -112,7 +120,7 @@ const Technologies = () => {
                 </Row>
                 {/* Other technologies and libraries/framework  */}
                 <Card
-                style={{marginTop:'50px'}}
+                style={{marginTop:'50px', cursor:'default'}}
                 >
                     <Card.Grid className='gridStyle'>
                         <Title level={5}>Other languages</Title>
