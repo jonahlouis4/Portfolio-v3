@@ -16,7 +16,7 @@ const sectionTitle = {
 const Technologies = () => {
     return (
         <div
-        style={{margin:'100px 0'}}
+        style={{margin:'150px 0'}}
         >
             <div
             style={{textAlign:'center'}}
