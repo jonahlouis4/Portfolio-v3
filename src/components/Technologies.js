@@ -55,20 +55,20 @@ const Technologies = () => {
      */
     const logoDisplay = (name) => {
         if (name === technologies[0].name) {
-            return <FontAwesomeIcon icon={faJsSquare} size="6x" style={logoColorDefault}/>
+            return <FontAwesomeIcon icon={faJsSquare} size="5x" style={logoColorDefault}/>
         } else if (name === technologies[1].name) {
-            return <FontAwesomeIcon icon={faReact} size="6x" style={logoColorDefault}/>
+            return <FontAwesomeIcon icon={faReact} size="5x" style={logoColorDefault}/>
         } else if (name === technologies[2].name) {
-            return <FontAwesomeIcon icon={faWordpress} size="6x" style={logoColorDefault}/>
+            return <FontAwesomeIcon icon={faWordpress} size="5x" style={logoColorDefault}/>
         } else if (name === technologies[3].name) {
-            return <FontAwesomeIcon icon={faBootstrap} size="6x" style={logoColorDefault}/>
+            return <FontAwesomeIcon icon={faBootstrap} size="5x" style={logoColorDefault}/>
         }
     }
 
     /** Displays all 'top' technologies */
     const topTechDisplay = technologies.map(tech => { return (
         <Col
-        xs={{span:12}} sm={{span:12}} md={{span:6}} lg={{span:6}} xl={{span:6}}
+        span={6}
         key={tech.id}
         >
             {logoDisplay(tech.name)}
