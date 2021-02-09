@@ -1,12 +1,19 @@
 import { useState } from 'react'
 import './App.less'
 
+import { BackTop, Button, Popover } from 'antd'
+import { ArrowUpOutlined } from '@ant-design/icons'
 import Header from './components/Header'
 import SideNav from './components/SideNav'
 import Introduction from './components/Introduction'
 import Projects from './components/Projects'
 import Technologies from './components/Technologies'
 import Footer from './components/Footer'
+
+const backTopBtnStyle = {
+  backgroundColor: '#262626',
+  color: 'white'
+}
 
 function App() {
   /** Contains the section names for the navigation */
@@ -43,6 +50,15 @@ function App() {
         <Technologies />
         <Footer />
       </div>
+      {/* Back to top button */}
+      <BackTop>
+        <Popover 
+        content="Return to the top!"
+        trigger="hover"
+        >
+          <Button icon={<ArrowUpOutlined />} shape="circle" style={backTopBtnStyle} />
+        </Popover>
+      </BackTop>
     </>
   );
 }
