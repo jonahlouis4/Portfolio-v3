@@ -27,7 +27,7 @@ const Projects = () => {
     /** Card format for each project */
     const cardDisplay = projects.map(project => { return (
         <Col 
-        xs={{span:24}} sm={{span:24}} md={{span:12}} lg={{span:10}} xl={{span:9}}>
+        xs={{span:24}} sm={{span:24}} md={{span:12}} lg={{span:10}} xl={{span:12}}>
             <ProjectDisplay 
             iconName={project.iconName} 
             projectName={project.projectName}
@@ -40,7 +40,7 @@ const Projects = () => {
 
     return (
         <div
-        style={{padding:'150px 0'}}
+        style={{padding:'100px 0'}}
         >
             <div
             style={{textAlign: 'center'}}

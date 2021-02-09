@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Header.css'
-import { Typography, Space } from 'antd'
+import { Typography } from 'antd'
 import { MenuOutlined } from '@ant-design/icons'
 import logo from '../images/logo_home.jpg'
 
@@ -16,7 +16,7 @@ const navContainer = {
 
 const sectionContainer = {
     float: 'right',
-    fontWeight: "500"
+    fontWeight: "500",
 }
 
 const homeLink = { 
@@ -33,7 +33,7 @@ const menuIcon = {
 const sections = {
     fontSize: '16px',
     fontWeight: '100',
-    marginTop: '20px'
+    marginTop: '20px',
 }
 
 const Header = ({isOpen, sideNavControl, sectionName}) => {
@@ -55,12 +55,10 @@ const Header = ({isOpen, sideNavControl, sectionName}) => {
                 <div
                 style={sectionContainer}
                 >
-                    <Space size="large" >
-                        <a href="#" style={sections} className="section-sections sLink">{sectionName.section1}</a>
-                        <a href="#" style={sections} className="section-sections sLink">{sectionName.section2}</a>
-                        <a href="#" style={sections} className="section-sections sLink">{sectionName.section3}</a>
-                        <MenuOutlined style={menuIcon} className="section-menu" onClick={navControl}/>
-                    </Space>                    
+                    <a href="#" style={sections} className="section-sections sLink">{sectionName.section1}</a>
+                    <a href="#" style={sections} className="section-sections sLink">{sectionName.section2}</a>
+                    <a href="#" style={sections} className="section-sections sLink">{sectionName.section3}</a>
+                    <MenuOutlined style={menuIcon} className="section-menu" onClick={navControl}/>                 
                 </div>
             </div>
         </div>
