@@ -40,7 +40,7 @@ const Projects = () => {
 
     return (
         <div
-        style={{padding:'150px 0'}}
+        style={{padding:'125px 0'}}
         >
             <div
             style={{textAlign: 'center'}}
@@ -48,7 +48,7 @@ const Projects = () => {
                 <Title style={sectionTitle}>Some <span style={{fontWeight: '500'}}>Projects</span> I accomplished</Title>
             </div>
            <div
-           style={{paddingTop: '50px'}}
+           style={{paddingTop: '75px'}}
            >
                <Row 
                justify="space-between"

@@ -16,7 +16,7 @@ const sectionTitle = {
 const Technologies = () => {
     return (
         <div
-        style={{margin:'150px 0'}}
+        style={{margin:'125px 0', border: '1px solid red'}}
         >
             <div
             style={{textAlign:'center'}}
@@ -24,7 +24,7 @@ const Technologies = () => {
                 <Title style={sectionTitle}><span style={{fontWeight: '500'}}>Technologies</span> I've been working with</Title>
             </div>
             <div
-            style={{paddingTop:'50px', border: '1px solid red'}}
+            style={{paddingTop:'75px'}}
             >
                 {/* Top 4 technologies */}
                 <Row
