@@ -16,7 +16,7 @@ const sectionTitle = {
 const Technologies = () => {
     return (
         <div
-        style={{margin:'100px'}}
+        style={{margin:'100px 0'}}
         >
             <div
             style={{textAlign:'center'}}
@@ -26,7 +26,7 @@ const Technologies = () => {
             <div
             style={{paddingTop:'50px', border: '1px solid red'}}
             >
-
+                text
             </div>
         </div>
     )
