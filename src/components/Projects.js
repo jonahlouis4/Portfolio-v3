@@ -16,10 +16,10 @@ const sectionTitle = {
 const Projects = () => {
     /** Usestate of all projects - contains all project information */
     const [projects] = useState([
-        {iconName: "faReact", projectName: "StudyBuddy", 
+        {id: 1, iconName: "faReact", projectName: "StudyBuddy", 
             description: "A simple flash card web application designed for studying.", 
             github: "https://github.com/jonahlouis4/StudyBuddy", url:"https://jonahlouis4.github.io/StudyBuddy/" },
-        {iconName: "faPhp", projectName: "Portfolio v2", 
+        {id: 2, iconName: "faPhp", projectName: "Portfolio v2", 
             description: "The second version of my personal portfolio.",
             github: "https://github.com/jonahlouis4/Portfolio-v2", url:"https://jonahlouis.ca/"  },
     ])
@@ -27,7 +27,9 @@ const Projects = () => {
     /** Card format for each project */
     const cardDisplay = projects.map(project => { return (
         <Col 
-        xs={{span:24}} sm={{span:24}} md={{span:11}} lg={{span:11}} xl={{span:11}}>
+        xs={{span:24}} sm={{span:24}} md={{span:11}} lg={{span:11}} xl={{span:11}}
+        key={project.id}
+        >
             <ProjectDisplay 
             iconName={project.iconName} 
             projectName={project.projectName}
