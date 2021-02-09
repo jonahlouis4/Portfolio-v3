@@ -40,7 +40,7 @@ const Projects = () => {
 
     return (
         <div
-        style={{padding:'100px 0', border: '1px solid red'}}
+        style={{padding:'100px 0'}}
         >
             <div
             style={{textAlign: 'center'}}

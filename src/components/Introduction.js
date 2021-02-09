@@ -27,7 +27,7 @@ const colorFont = {
 const Introduction = () => {
     return (
         <div
-        style={{margin: '200px 0', border: '1px solid red'}}
+        style={{margin: '200px 0'}}
         className="introduction-container"
         >
             <Row>
