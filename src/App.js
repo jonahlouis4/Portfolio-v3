@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 
 function App() {
   /** Contains the section names for the navigation */
-  const [sectionName] = useState({section1: "Projects", section2: "Skills", section3: "Section 3"})
+  const [sectionName] = useState({section1: "Projects", section2: "Skills", section3: "Contact"})
   /** Determines wether the side navigation is opened (isOpen = true), or closed (isOpen = false) */
   const [isOpen, setIsOpen] = useState(false);
 

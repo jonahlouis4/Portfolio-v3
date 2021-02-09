@@ -26,7 +26,7 @@ const Technologies = () => {
             <div
             style={{paddingTop:'50px', border: '1px solid red'}}
             >
-                text
+                
             </div>
         </div>
     )

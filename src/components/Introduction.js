@@ -43,7 +43,7 @@ const Introduction = () => {
                     style={{marginTop: '10px'}}
                     >
                         <Space size="small">
-                            <Button >Start a project</Button>
+                            <Button >Contact me</Button>
                             <a href="https://github.com/jonahlouis4" target="_blank">
                                 <Button shape="circle" icon={<GithubOutlined />} />
                             </a>
