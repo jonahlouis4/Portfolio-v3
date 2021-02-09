@@ -1,10 +1,9 @@
 import React from 'react'
 import './Header.css'
-import { Typography } from 'antd'
+
 import { MenuOutlined } from '@ant-design/icons'
 import logo from '../images/logo_home.jpg'
 
-const { Title } = Typography
 
 const navContainer = {
     width: '100%',
@@ -33,10 +32,10 @@ const menuIcon = {
 const sections = {
     fontSize: '16px',
     fontWeight: '100',
-    marginTop: '20px',
+    marginTop: '22px',
 }
 
-const Header = ({isOpen, sideNavControl, sectionName}) => {
+const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
     /** Sets isOpen useState to true */
     const navControl = () => {
         var open = isOpen;
@@ -51,13 +50,13 @@ const Header = ({isOpen, sideNavControl, sectionName}) => {
             <div 
             className="nav"
             >
-                <a href="#" style={homeLink}><img src={logo} width='70'/></a>
+                <a href="/" style={homeLink}><img src={logo} width='70'/></a>
                 <div
                 style={sectionContainer}
                 >
-                    <a href="#" style={sections} className="section-sections sLink">{sectionName.section1}</a>
-                    <a href="#" style={sections} className="section-sections sLink">{sectionName.section2}</a>
-                    <a href="#" style={sections} className="section-sections sLink">{sectionName.section3}</a>
+                    <a href={'#'+sectionLink.section1} style={sections} className="section-sections sLink">{sectionName.section1}</a>
+                    <a href={'#'+sectionLink.section2} style={sections} className="section-sections sLink">{sectionName.section2}</a>
+                    <a href={'#'+sectionLink.section3} style={sections} className="section-sections sLink">{sectionName.section3}</a>
                     <MenuOutlined style={menuIcon} className="section-menu" onClick={navControl}/>                 
                 </div>
             </div>

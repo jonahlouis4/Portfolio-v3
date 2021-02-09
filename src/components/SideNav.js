@@ -35,7 +35,7 @@ const closeBtn = {
  * @param {function} sideNavControl - Closes the side navigation
  * @param {object} sectionName - Contains all section names
  */
-const SideNav = ({isOpen, sideNavControl, sectionName}) => {
+const SideNav = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
     /** Holds the classname for when the navigation is OPEN */
     const navOpenClass = "sideNav-open";
     /** Holds the classname for when the navigation is CLOSED */
@@ -51,9 +51,9 @@ const SideNav = ({isOpen, sideNavControl, sectionName}) => {
     return (
         <div style={sideNavStyle} className={isOpen ? navOpenClass : navCloseClass}>
             <a><CloseOutlined style={closeBtn} onClick={navControl} className="options"/></a>
-            <a href="#"><Text type="secondary" className="options">{sectionName.section1}</Text></a>
-            <a href="#"><Text type="secondary" className="options">{sectionName.section2}</Text></a>
-            <a href="#"><Text type="secondary" className="options">{sectionName.section3}</Text></a>
+            <a href={'#'+sectionLink.section1}><Text type="secondary" className="options">{sectionName.section1}</Text></a>
+            <a href={'#'+sectionLink.section2}><Text type="secondary" className="options">{sectionName.section2}</Text></a>
+            <a href={'#'+sectionLink.section3}><Text type="secondary" className="options">{sectionName.section3}</Text></a>
         </div>
     )
 }

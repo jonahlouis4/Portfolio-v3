@@ -11,6 +11,8 @@ import Footer from './components/Footer'
 function App() {
   /** Contains the section names for the navigation */
   const [sectionName] = useState({section1: "Projects", section2: "Skills", section3: "Contact"})
+  /** Contains the sections links for the navigation */
+  const [sectionLink] = useState({section1: "project-section", section2: "skill-section", section3: "contact-section"})
   /** Determines wether the side navigation is opened (isOpen = true), or closed (isOpen = false) */
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,20 +26,20 @@ function App() {
 
   return (
     <>
-      <SideNav isOpen={isOpen} sideNavControl={sideNavControl} sectionName={sectionName} />
-      <Header isOpen={isOpen} sideNavControl={sideNavControl} sectionName={sectionName} />
+      <SideNav isOpen={isOpen} sideNavControl={sideNavControl} sectionName={sectionName} sectionLink={sectionLink}/>
+      <Header isOpen={isOpen} sideNavControl={sideNavControl} sectionName={sectionName} sectionLink={sectionLink}/>
       {/* Section - Introduction */}
-      <div className="container">
+      <div className="container" id={sectionLink.section1}>
         <Introduction />
       </div>
       {/* Section - Projects */}
-      <div id="container-bg-1">
+      <div class="container-bg-1" id={sectionLink.section2}>
         <div className="container">
           <Projects />
         </div>
       </div>
       {/* Section - Technologies */}
-      <div className="container">
+      <div className="container" id={sectionLink.section3}>
         <Technologies />
         <Footer />
       </div>
