@@ -11,7 +11,7 @@ import Technologies from './components/Technologies'
 import Footer from './components/Footer'
 
 const backTopBtnStyle = {
-  backgroundColor: '#262626',
+  backgroundColor: '#434343',
   color: 'white'
 }
 
@@ -48,7 +48,12 @@ function App() {
       {/* Section - Technologies */}
       <div className="container" id={sectionLink.section3}>
         <Technologies />
-        <Footer />
+      </div>
+      {/* Footer */}
+      <div class="container-bg-2">
+        <div className="container">
+          <Footer />
+        </div>
       </div>
       {/* Back to top button */}
       <BackTop>
