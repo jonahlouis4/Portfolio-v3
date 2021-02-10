@@ -36,17 +36,17 @@ function App() {
       <SideNav isOpen={isOpen} sideNavControl={sideNavControl} sectionName={sectionName} sectionLink={sectionLink}/>
       <Header isOpen={isOpen} sideNavControl={sideNavControl} sectionName={sectionName} sectionLink={sectionLink}/>
       {/* Section - Introduction */}
-      <div className="container" id={sectionLink.section1}>
+      <div className="container">
         <Introduction />
       </div>
       {/* Section - Projects */}
-      <div class="container-bg-1" id={sectionLink.section2}>
+      <div class="container-bg-1" id={sectionLink.section1}>
         <div className="container">
           <Projects />
         </div>
       </div>
       {/* Section - Technologies */}
-      <div className="container" id={sectionLink.section3}>
+      <div className="container" id={sectionLink.section2}>
         <Technologies />
       </div>
       {/* Footer */}
