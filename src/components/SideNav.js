@@ -1,7 +1,7 @@
 import React from 'react'
 import './SideNav.css'
 
-import { Typography } from 'antd'
+import { Typography, Button } from 'antd'
 import { CloseOutlined } from '@ant-design/icons'
 
 const { Text } = Typography;
@@ -53,7 +53,7 @@ const SideNav = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
             <a><CloseOutlined style={closeBtn} onClick={navControl} className="options"/></a>
             <a href={'#'+sectionLink.section1}><Text type="secondary" className="options">{sectionName.section1}</Text></a>
             <a href={'#'+sectionLink.section2}><Text type="secondary" className="options">{sectionName.section2}</Text></a>
-            <a href={'#'+sectionLink.section3}><Text type="secondary" className="options">{sectionName.section3}</Text></a>
+            <Button id="option-btn">{sectionName.section3}</Button>
         </div>
     )
 }

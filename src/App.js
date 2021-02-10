@@ -17,9 +17,9 @@ const backTopBtnStyle = {
 
 function App() {
   /** Contains the section names for the navigation */
-  const [sectionName] = useState({section1: "Projects", section2: "Skills", section3: "Contact"})
+  const [sectionName] = useState({section1: "Projects", section2: "Skills", section3: "Resume"})
   /** Contains the sections links for the navigation */
-  const [sectionLink] = useState({section1: "project-section", section2: "skill-section", section3: "contact-section"})
+  const [sectionLink] = useState({section1: "project-section", section2: "skill-section"})
   /** Determines wether the side navigation is opened (isOpen = true), or closed (isOpen = false) */
   const [isOpen, setIsOpen] = useState(false);
 

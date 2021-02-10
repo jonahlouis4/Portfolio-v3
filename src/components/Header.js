@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css'
 
+import { Button } from 'antd'
 import { MenuOutlined } from '@ant-design/icons'
 import logo from '../images/logo_home.jpg'
 
@@ -35,6 +36,10 @@ const sections = {
     marginTop: '22px',
 }
 
+const sectionBtn = {
+    marginTop: '22px'
+}
+
 const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
     /** Sets isOpen useState to true */
     const navControl = () => {
@@ -56,7 +61,7 @@ const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
                 >
                     <a href={'#'+sectionLink.section1} style={sections} className="section-sections sLink">{sectionName.section1}</a>
                     <a href={'#'+sectionLink.section2} style={sections} className="section-sections sLink">{sectionName.section2}</a>
-                    <a href={'#'+sectionLink.section3} style={sections} className="section-sections sLink">{sectionName.section3}</a>
+                    <Button style={sectionBtn} className="section-sections sLink" >{sectionName.section3}</Button>
                     <MenuOutlined style={menuIcon} className="section-menu" onClick={navControl}/>                 
                 </div>
             </div>

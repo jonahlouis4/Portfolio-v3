@@ -6,6 +6,10 @@
     display: block;
     transition: 0.3s;
 }
+#option-btn {
+    margin-left: 32px;
+    margin-top: 8px;
+}
     .options:hover {
         color: #1890ff !important;
     }
