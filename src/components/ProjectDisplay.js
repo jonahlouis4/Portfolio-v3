@@ -7,8 +7,17 @@ import { GithubOutlined, ExportOutlined } from '@ant-design/icons';
 
 const { Meta } = Card;
 
+/**
+ * Returns a formatted card for each individual project
+ * @param {string} iconName - Icon name for Font Awesome, language/framework of project
+ * @param {string} projectName - The title of the project
+ * @param {string} description - The description of the project
+ * @param {string} github - The github url of the project
+ * @param {string} url - the direct url of the project
+ */
 const ProjectDisplay = ({iconName, projectName, description, github, url}) => {
     
+    /** Returns the appropriate icon */
     function iconDisplay() {
         if (iconName === "faReact") {
             // Color = #00d8ff

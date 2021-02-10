@@ -22,6 +22,7 @@ const carretColor = {
     color: '#1890ff'
 }
 
+/** Returns formatted display of technologies */
 const Technologies = () => {
     /** Contains all top tech. names */
     const [technologies] = useState([

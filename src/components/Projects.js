@@ -13,6 +13,7 @@ const sectionTitle = {
     padding: '0'
 }
 
+/** Contains all project information */
 const Projects = () => {
     /** Usestate of all projects - contains all project information */
     const [projects] = useState([
