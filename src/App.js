@@ -40,7 +40,7 @@ function App() {
         <Introduction />
       </div>
       {/* Section - Projects */}
-      <div class="container-bg-1" id={sectionLink.section1}>
+      <div className="container-bg-1" id={sectionLink.section1}>
         <div className="container">
           <Projects />
         </div>
@@ -50,7 +50,7 @@ function App() {
         <Technologies />
       </div>
       {/* Footer */}
-      <div class="container-bg-2">
+      <div className="container-bg-2">
         <div className="container">
           <Footer />
         </div>
