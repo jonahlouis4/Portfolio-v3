@@ -28,7 +28,7 @@ const homeLink = {
 
 const menuIcon = {
     fontSize: '25px',
-    marginTop: '22px'
+    marginTop: '24px'
 }
 
 const sections = {
@@ -83,7 +83,7 @@ const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
             <div 
             className="nav"
             >
-                <motion.a href="/" style={homeLink} variants={sectionVariant}><img src={logo} width='70' /></motion.a>
+                <motion.a href="/" style={homeLink} variants={sectionVariant}><img src={logo} width='70' alt=""/></motion.a>
                 <div
                 style={sectionContainer}
                 >
