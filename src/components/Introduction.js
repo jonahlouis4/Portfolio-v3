@@ -37,7 +37,7 @@ const Introduction = () => {
                 >
                     <Title style={headerTitle}>I'm Jonah,</Title>
                     <Title level={3} style={subHeaderTitle} type="secondary">
-                        I love to <span style={colorFont}>learn</span>, <span style={colorFont}>build</span>, and <span style={colorFont}>innovate</span> things for the web.
+                        I love to <span style={colorFont}>learn</span> and <span style={colorFont}>build</span> things for the web.
                     </Title>
                     <div
                     style={{marginTop: '10px'}}
