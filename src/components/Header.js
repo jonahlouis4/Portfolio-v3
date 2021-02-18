@@ -110,6 +110,8 @@ const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
                     </motion.a>
                     <motion.div
                     variants={menuVariant} 
+                    initial="hidden"
+                    animate="visible"
                     whileHover="hover"
                     whileTap="tap"
                     >
