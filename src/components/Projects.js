@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import ProjectDisplay from './ProjectDisplay'
-import FadeInWhenVisible from './FadeInWhenVisible'
 import { useInView } from 'react-intersection-observer';
+import ProjectDisplay from './ProjectDisplay'
 
 import { motion } from 'framer-motion'
 import { useAnimation } from 'framer-motion';
