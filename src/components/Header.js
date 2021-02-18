@@ -60,7 +60,9 @@ const menuVariant = {
         opacity: 1, scale: [1,1.5,1.5,1,1], rotate: [0,0,270,270,0],
         transition: { duration: 2 },    
     },
-    hidden: { opacity: 0 }
+    hidden: { opacity: 0 },
+    hover: { scale: 1.1 },
+    tap: { scale: 0.9 }
 }
 
 const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
@@ -108,6 +110,8 @@ const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
                     </motion.a>
                     <motion.div
                     variants={menuVariant} 
+                    whileHover="hover"
+                    whileTap="tap"
                     >
                         <MenuOutlined style={menuIcon} className="section-menu" onClick={navControl}/>
                     </motion.div>             
