@@ -1,6 +1,7 @@
 import React from 'react'
 import './SideNav.css'
 
+import { motion } from "framer-motion"
 import { Typography, Button } from 'antd'
 import { CloseOutlined } from '@ant-design/icons'
 
@@ -46,6 +47,8 @@ const SideNav = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
         var open = isOpen;
         open = false;
         sideNavControl(open);
+
+        document.body.style.overflow = "auto";
     }
 
     return (

@@ -71,6 +71,8 @@ const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
         var open = isOpen;
         open = true;
         sideNavControl(open);
+
+        document.body.style.overflow = "hidden";
     }
 
     return (
