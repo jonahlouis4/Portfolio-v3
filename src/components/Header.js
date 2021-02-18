@@ -37,7 +37,7 @@ const sections = {
 }
 
 const sectionBtn = {
-    marginTop: '22px'
+    marginTop: '22px',
 }
 
 const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
