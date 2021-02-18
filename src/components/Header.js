@@ -55,6 +55,14 @@ const sectionVariant = {
     hidden: { opacity: 0 }
 }
 
+const menuVariant = {
+    visible: { 
+        opacity: 1, scale: [1,1.5,1.5,1,1], rotate: [0,0,270,270,0],
+        transition: { duration: 2 },    
+    },
+    hidden: { opacity: 0 }
+}
+
 const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
     /** Sets isOpen useState to true */
     const navControl = () => {
@@ -99,7 +107,7 @@ const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
                         <Button style={sectionBtn} className="section-sections sLink" >{sectionName.section3}</Button>
                     </motion.a>
                     <motion.div
-                    variants={sectionVariant} 
+                    variants={menuVariant} 
                     >
                         <MenuOutlined style={menuIcon} className="section-menu" onClick={navControl}/>
                     </motion.div>             
