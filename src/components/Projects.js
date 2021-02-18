@@ -68,9 +68,12 @@ const Projects = () => {
         </Col>
     )})
 
+    /** Framer motion animateControl */
     const controls = useAnimation();
+    /** useInView - determines when a componenent is in view */
     const [ref, inView] = useInView({threshold: 0.5});
-  
+    
+    /** Set the variant to 'visible' if it's in view */
     useEffect(() => {
       if (inView) {
         controls.start("visible");

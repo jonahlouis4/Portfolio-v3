@@ -45,14 +45,14 @@ const sectionBtn = {
 const contVariant = {
     visible: { 
         opacity: 1, y: 0, 
-        transition: { duration:0.7, when:"beforeChildren", staggerChildren:0.2 }, 
+        transition: { duration:0.5, when:"beforeChildren", staggerChildren:0.2 }, 
     },
     hidden: { opacity: 0, y: -100 },
 }
 
 const sectionVariant = {
-    visible: { opacity: 1, transition: { duration: 1 } },
-    hidden: { opacity: 0 }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, y: -50 }
 }
 
 const menuVariant = {
@@ -105,11 +105,12 @@ const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
                     >
                         {sectionName.section2}
                     </motion.a>
-                    <motion.a
+                    <motion.div
                     variants={sectionVariant} 
+                    style={{display: 'inline-block'}}
                     >
                         <Button style={sectionBtn} className="section-sections sLink" >{sectionName.section3}</Button>
-                    </motion.a>
+                    </motion.div>
                     <motion.div
                     variants={menuVariant} 
                     initial="hidden"
