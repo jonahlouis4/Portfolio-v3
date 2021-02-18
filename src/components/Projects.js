@@ -1,16 +1,43 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ProjectDisplay from './ProjectDisplay'
+import FadeInWhenVisible from './FadeInWhenVisible'
+import { useInView } from 'react-intersection-observer';
 
+import { motion } from 'framer-motion'
+import { useAnimation } from 'framer-motion';
 import { Typography, Col, Row } from 'antd';
 
 const { Title } = Typography;
 
+// Styles
 const sectionTitle = {
     fontSize: '30px',
     fontWeight: '100',
     color: 'white',
     margin: '0',
     padding: '0'
+}
+
+// Variants
+const contVariant = {
+    visible: { opacity:1, 
+        transition: { when: "beforeChildren", staggerChildren: 0.3 }
+    },
+    hidden: { opacity:0 }
+}
+
+const titleVariant = {
+    visible: { opacity:1,
+        transition: { duration: 1 }
+    },
+    hidden: { opacity:0 }
+}
+
+const projectVariant = {
+    visible: { opacity: 1, scale: 1,
+        transition: { duration: 1 }
+    },
+    hidden: { opacity:0, scale: 0.9 }
 }
 
 /** Contains all project information */
@@ -41,27 +68,45 @@ const Projects = () => {
         </Col>
     )})
 
+    const controls = useAnimation();
+    const [ref, inView] = useInView({threshold: 0.5});
+  
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      }
+    }, [controls, inView]);
+
     return (
-        <div
-        style={{padding:'125px 0'}}
-        >
-            <div
-            style={{textAlign: 'center'}}
+        
+            <motion.div
+            style={{padding:'125px 0'}}
+            ref={ref}
+            animate={controls}
+            initial="hidden"
+            variants={contVariant}
             >
-                <Title style={sectionTitle}>Some <span style={{fontWeight: '500'}}>Projects</span> I accomplished</Title>
-            </div>
-           <div
-           style={{paddingTop: '75px'}}
-           >
-               <Row 
-               justify="space-between"
-               gutter={[0, 48]}
-               >
-                   {/* Display all cards */}
-                  {cardDisplay}
-               </Row>
-           </div>
-        </div>
+                <motion.div
+                style={{textAlign: 'center'}}
+                variants={titleVariant}
+                >
+                    <Title style={sectionTitle}>Some <span style={{fontWeight: '500'}}>Projects</span> I accomplished</Title>
+                </motion.div>
+                <motion.div
+                style={{paddingTop: '75px'}}
+                variants={projectVariant}
+                >
+                    <Row 
+                    justify="space-between"
+                    gutter={[0, 48]}
+                    >
+                        {/* Display all cards */}
+                        {cardDisplay}
+                    </Row>
+                </motion.div>
+            </motion.div>
+        
+
     )
 }
 
