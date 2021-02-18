@@ -78,9 +78,7 @@ const Introduction = () => {
                                 <Button shape="circle" icon={<GithubOutlined />} />
                             </motion.a>
                         </Space>
-                        
                     </div>
-                    
                 </Col>
                 <Col 
                 xl={6} 
