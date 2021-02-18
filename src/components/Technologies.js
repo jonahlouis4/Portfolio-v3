@@ -1,5 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useInView } from 'react-intersection-observer';
 
+import { motion } from 'framer-motion'
+import { useAnimation } from 'framer-motion';
 import { Typography, Col, Row, Card } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReact, faJsSquare, faWordpress, faBootstrap } from '@fortawesome/free-brands-svg-icons'
@@ -7,6 +10,7 @@ import { CaretRightOutlined } from '@ant-design/icons'
 
 const { Title,Text } = Typography;
 
+// Styles
 const sectionTitle = {
     fontSize: '30px',
     fontWeight: '100',
@@ -21,6 +25,8 @@ const logoColorDefault = {
 const carretColor = {
     color: '#1890ff'
 }
+
+// Variants
 
 /** Returns formatted display of technologies */
 const Technologies = () => {
