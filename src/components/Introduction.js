@@ -29,16 +29,16 @@ const colorFont = {
 // Variants
 const contVariant = {
     visible: { opacity: 1,
-        transition: { delay:1.8, when:"beforeChildren", staggerChildren: 0.2 },
+        transition: { delay:1, when:"beforeChildren", staggerChildren: 0.2 },
     },
     hidden: { opacity: 0 }
 }
 
 const elementVariant = {
-    visible: { opacity:1,
-        transition: { duration: 1 },
+    visible: { opacity: 1, y: 0,
+        transition: { duration: 0.5 },
     },
-    hidden: { opacity: 0 }
+    hidden: { y: -40, opacity: 0 }
 }
 
 const Introduction = () => {
