@@ -28,42 +28,52 @@ function App() {
    * @param {boolean} isOpen - Either true for open or false for close
    */
   const sideNavControl = (isOpen) => {
+    var content = document.getElementsByClassName("body-content");
+
     setIsOpen(isOpen);
+
+    if (isOpen) { content[0].style.filter = "blur(5px)"; }
+    else { content[0].style.filter = "blur(0px)"; } 
   }
 
   return (
     <>
       <SideNav isOpen={isOpen} sideNavControl={sideNavControl} sectionName={sectionName} sectionLink={sectionLink}/>
-      <Header isOpen={isOpen} sideNavControl={sideNavControl} sectionName={sectionName} sectionLink={sectionLink}/>
-      {/* Section - Introduction */}
-      <div className="container">
-        <Introduction />
-      </div>
-      {/* Section - Projects */}
-      <div className="container-bg-1" id={sectionLink.section1}>
+      <div
+      className="body-content"
+      >
+        <Header isOpen={isOpen} sideNavControl={sideNavControl} sectionName={sectionName} sectionLink={sectionLink}/>
+        {/* Section - Introduction */}
         <div className="container">
-          <Projects />
+          <Introduction />
         </div>
-      </div>
-      {/* Section - Technologies */}
-      <div className="container" id={sectionLink.section2}>
-        <Technologies />
-      </div>
-      {/* Footer */}
-      <div className="container-bg-2">
-        <div className="container">
-          <Footer />
+        {/* Section - Projects */}
+        <div className="container-bg-1" id={sectionLink.section1}>
+          <div className="container">
+            <Projects />
+          </div>
         </div>
+        {/* Section - Technologies */}
+        <div className="container" id={sectionLink.section2}>
+          <Technologies />
+        </div>
+        {/* Footer */}
+        <div className="container-bg-2">
+          <div className="container">
+            <Footer />
+          </div>
+        </div>
+        {/* Back to top button */}
+        <BackTop>
+          <Popover 
+          content="Return to the top!"
+          trigger="hover"
+          >
+            <Button icon={<ArrowUpOutlined />} shape="circle" style={backTopBtnStyle} />
+          </Popover>
+        </BackTop>
       </div>
-      {/* Back to top button */}
-      <BackTop>
-        <Popover 
-        content="Return to the top!"
-        trigger="hover"
-        >
-          <Button icon={<ArrowUpOutlined />} shape="circle" style={backTopBtnStyle} />
-        </Popover>
-      </BackTop>
+
     </>
   );
 }
