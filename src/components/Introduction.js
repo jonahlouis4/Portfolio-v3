@@ -35,10 +35,10 @@ const contVariant = {
 }
 
 const elementVariant = {
-    visible: { opacity: 1, y: 0,
+    visible: { opacity: 1, x: 0,
         transition: { duration: 0.5 },
     },
-    hidden: { y: -40, opacity: 0 }
+    hidden: { x: -40, opacity: 0 }
 }
 
 const Introduction = () => {

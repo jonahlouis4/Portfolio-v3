@@ -28,7 +28,7 @@ const homeLink = {
 
 const menuIcon = {
     fontSize: '25px',
-    marginTop: '24px'
+    marginTop: '2px'
 }
 
 const sections = {
