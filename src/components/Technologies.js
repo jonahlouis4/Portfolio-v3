@@ -27,6 +27,33 @@ const carretColor = {
 }
 
 // Variants
+const contVariant = {
+    visible: { opacity:1, 
+        transition: { when: "beforeChildren", staggerChildren: 0.2 }
+    },
+    hidden: { opacity:0 }
+}
+
+const titleVariant = {
+    visible: { opacity:1,
+        transition: { duration: 1 }
+    },
+    hidden: { opacity:0 }
+}
+
+const logoVariant = {
+    visible: { opacity: 1, scale: 1,
+        transition: { duration: 0.5 }
+    },
+    hidden: { opacity:0, scale: 0 }
+}
+
+const elementVariant = {
+    visible: { opacity: 1, scale: 1,
+        transition: { duration: 0.5 }
+    },
+    hidden: { opacity:0, scale: 0.9 }
+}
 
 /** Returns formatted display of technologies */
 const Technologies = () => {
@@ -78,8 +105,12 @@ const Technologies = () => {
         span={6}
         key={tech.id}
         >
-            {logoDisplay(tech.name)}
-            <Title level={5}>{ tech.name }</Title>
+            <motion.div
+            variants={logoVariant}
+            >
+                {logoDisplay(tech.name)}
+                <Title level={5}>{ tech.name }</Title>
+            </motion.div>
         </Col>
     )})
     
@@ -105,15 +136,32 @@ const Technologies = () => {
  
     )})
 
+    /** Framer motion animateControl */
+    const controls = useAnimation();
+    /** useInView - determines when a componenent is in view */
+    const [ref, inView] = useInView({threshold: 0.5});
+    
+    /** Set the variant to 'visible' if it's in view */
+    useEffect(() => {
+        if (inView) {
+        controls.start("visible");
+        }
+    }, [controls, inView]);
+
     return (
-        <div
+        <motion.div
         style={{margin:'125px 0'}}
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={contVariant}
         >
-            <div
+            <motion.div
             style={{textAlign:'center'}}
+            variants={titleVariant}
             >
                 <Title style={sectionTitle}><span style={{fontWeight: '500'}}>Technologies</span> I've been working with</Title>
-            </div>
+            </motion.div>
             <div
             style={{paddingTop:'75px'}}
             >
@@ -125,20 +173,25 @@ const Technologies = () => {
                     { topTechDisplay }
                 </Row>
                 {/* Other technologies and libraries/framework  */}
-                <Card
-                style={{marginTop:'50px', cursor:'default'}}
+                <motion.div
+                variants={elementVariant}
                 >
-                    <Card.Grid className='gridStyle'>
-                        <Title level={5}>Other languages</Title>
-                        { languageDisplay }
-                    </Card.Grid>
-                    <Card.Grid className='gridStyle'>
-                        <Title level={5}>Other frameworks</Title>
-                        { frameworkDisplay } 
-                    </Card.Grid>        
-                </Card>
+                    <Card
+                    style={{marginTop:'50px', cursor:'default'}}
+                    >
+                        <Card.Grid className='gridStyle'>
+                            <Title level={5}>Other languages</Title>
+                            { languageDisplay }
+                        </Card.Grid>
+                        <Card.Grid className='gridStyle'>
+                            <Title level={5}>Other frameworks</Title>
+                            { frameworkDisplay } 
+                        </Card.Grid>        
+                    </Card>
+                </motion.div>
+
             </div>
-        </div>
+        </motion.div>
     )
 }
 
