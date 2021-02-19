@@ -14,8 +14,9 @@ const { Meta } = Card;
  * @param {string} description - The description of the project
  * @param {string} github - The github url of the project
  * @param {string} url - the direct url of the project
+ * @param {boolean} disabled - disables the url link if equal to false
  */
-const ProjectDisplay = ({iconName, projectName, description, github, url}) => {
+const ProjectDisplay = ({iconName, projectName, description, github, url, disabled}) => {
     
     /** Returns the appropriate icon */
     function iconDisplay() {
@@ -28,12 +29,21 @@ const ProjectDisplay = ({iconName, projectName, description, github, url}) => {
         }
     }
 
+    /** Returns an active or disabled URL link depending on the disabled parameter*/
+    function urlActive() {
+        if (!disabled) {
+            return <a href={url} target="_blank"><ExportOutlined key="url" /></a>
+        } else {
+            return <ExportOutlined key="url" style={{cursor: 'not-allowed', fontSize: '14px'}}/>
+        }
+    }
+
     return (
         <Card
         hoverable
         actions={[
             <a href={github} target="_blank"><GithubOutlined key="github" /></a>,
-            <a href={url} target="_blank"><ExportOutlined key="url" /></a>
+            urlActive()
             ]}
         >
             <div 

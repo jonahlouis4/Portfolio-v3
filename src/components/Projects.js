@@ -45,10 +45,11 @@ const Projects = () => {
     const [projects] = useState([
         {id: 1, iconName: "faReact", projectName: "StudyBuddy", 
             description: "A simple flash card web application designed for studying.", 
-            github: "https://github.com/jonahlouis4/StudyBuddy", url:"https://jonahlouis4.github.io/StudyBuddy/" },
+            github: "https://github.com/jonahlouis4/StudyBuddy", url:"https://jonahlouis4.github.io/StudyBuddy/",
+            disabled: false },
         {id: 2, iconName: "faPhp", projectName: "Portfolio v2", 
             description: "The second version of my personal portfolio.",
-            github: "https://github.com/jonahlouis4/Portfolio-v2", url:"https://jonahlouis.ca/"  },
+            github: "https://github.com/jonahlouis4/Portfolio-v2", url:"https://jonahlouis.ca/", disabled: true },
     ])
 
     /** Card format for each project */
@@ -63,6 +64,7 @@ const Projects = () => {
             description={project.description}
             github={project.github}
             url={project.url}
+            disabled={project.disabled}
             />
         </Col>
     )})
