@@ -12,6 +12,7 @@ const footerTitle = {
     color: 'white'
 }
 
+/** Footer component of the website */
 const Footer = () => {
     return (
         <div

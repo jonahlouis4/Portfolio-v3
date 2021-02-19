@@ -41,6 +41,7 @@ const elementVariant = {
     hidden: { x: -40, opacity: 0 }
 }
 
+/** Introduction component - contains the introduction */
 const Introduction = () => {
     return (
         <motion.div

@@ -31,7 +31,7 @@ const closeBtn = {
 /**
  * Side navigation for smaller and mobile view
  * Reference: https://www.w3schools.com/howto/howto_js_sidenav.asp
- * @param {boolean} isOpen - State of side navigation
+ * @param {boolean} isOpen - State of side navigation. Either true or false.
  * @param {function} sideNavControl - Closes the side navigation
  * @param {object} sectionName - Contains all section names
  */

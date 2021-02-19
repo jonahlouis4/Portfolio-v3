@@ -65,6 +65,13 @@ const menuVariant = {
     tap: { scale: 0.9 }
 }
 
+/**
+ * Header component for the website
+ * @param {boolean} isOpen - State of side navigation. Either true or false.
+ * @param {function} sideNavControl - Closes the side navigation
+ * @param {string} sectionName - Contains the section's name
+ * @param {string} sectionLink - Contains the section's link
+ */
 const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
     /** Sets isOpen useState to true */
     const navControl = () => {
