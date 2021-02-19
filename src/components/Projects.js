@@ -92,7 +92,7 @@ const Projects = () => {
                 style={{textAlign: 'center'}}
                 variants={titleVariant}
                 >
-                    <Title style={sectionTitle}>Some <span style={{fontWeight: '500'}}>Projects</span> I accomplished</Title>
+                    <Title style={sectionTitle}>Some <span style={{fontWeight: '500'}}>Projects</span> I accomplished.</Title>
                 </motion.div>
                 <motion.div
                 style={{paddingTop: '75px'}}
