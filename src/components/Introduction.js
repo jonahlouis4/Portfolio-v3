@@ -60,6 +60,7 @@ const Introduction = () => {
                 <Col 
                 xl={18} 
                 style={{ margin:'auto'}}
+                id="intro-left"
                 >
                     <motion.div variants={elementVariant}>
                         <Title style={headerTitle}>I'm Jonah,</Title>
