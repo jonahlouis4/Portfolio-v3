@@ -1,8 +1,9 @@
 import React from 'react'
 import './SideNav.css'
 
-import { Typography, Button } from 'antd'
-import { CloseOutlined } from '@ant-design/icons'
+import Typography from 'antd/lib/typography'
+import Button from 'antd/lib/button'
+import CloseOutlined from '@ant-design/icons/CloseOutlined'
 
 const { Text } = Typography;
 

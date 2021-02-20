@@ -1,8 +1,13 @@
 import React from 'react'
 
 import { motion } from 'framer-motion'
-import { Row, Col, Typography, Button, Avatar, Space } from 'antd'
-import { GithubOutlined } from '@ant-design/icons'
+import Row from 'antd/lib/row'
+import Col from 'antd/lib/col'
+import Typography from 'antd/lib/typography'
+import Button from 'antd/lib/button'
+import Avatar from 'antd/lib/avatar'
+import Space from 'antd/lib/space'
+import GithubOutlined from '@ant-design/icons/GithubOutlined'
 import user from '../images/jonah.jpg'
 
 const { Title } = Typography;

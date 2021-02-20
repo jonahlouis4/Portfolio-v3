@@ -1,8 +1,9 @@
 import React from 'react'
-import { Card } from 'antd';
 
+import Card from 'antd/lib/card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact, faPhp } from '@fortawesome/free-brands-svg-icons'
+import { faReact } from '@fortawesome/free-brands-svg-icons/faReact'
+import { faPhp } from '@fortawesome/free-brands-svg-icons/faPhp'
 import { GithubOutlined, ExportOutlined } from '@ant-design/icons';
 
 const { Meta } = Card;

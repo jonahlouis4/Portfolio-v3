@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer';
 
+import Typography from 'antd/lib/typography';
+import Col from 'antd/lib/col';
+import Row from 'antd/lib/row';
+import Card from 'antd/lib/card';
 import { motion } from 'framer-motion'
 import { useAnimation } from 'framer-motion';
-import { Typography, Col, Row, Card } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact, faJsSquare, faWordpress, faBootstrap } from '@fortawesome/free-brands-svg-icons'
+import { faReact } from '@fortawesome/free-brands-svg-icons/faReact'
+import { faJsSquare } from '@fortawesome/free-brands-svg-icons/faJsSquare'
+import { faWordpress } from '@fortawesome/free-brands-svg-icons/faWordpress'
+import { faBootstrap } from '@fortawesome/free-brands-svg-icons/faBootstrap'
 import { CaretRightOutlined } from '@ant-design/icons'
 
 const { Title,Text } = Typography;

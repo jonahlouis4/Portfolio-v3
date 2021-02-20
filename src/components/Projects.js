@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer';
 import ProjectDisplay from './ProjectDisplay'
 
+import Typography from 'antd/lib/typography';
+import Col from 'antd/lib/col';
+import Row from 'antd/lib/row';
 import { motion } from 'framer-motion'
 import { useAnimation } from 'framer-motion';
-import { Typography, Col, Row } from 'antd';
 
 const { Title } = Typography;
 

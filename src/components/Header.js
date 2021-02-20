@@ -2,8 +2,8 @@ import React from 'react'
 import './Header.css'
 
 import { motion } from "framer-motion"
-import { Button } from 'antd'
-import { MenuOutlined } from '@ant-design/icons'
+import Button from 'antd/lib/button'
+import MenuOutlined from '@ant-design/icons/MenuOutlined'
 import logo from '../images/logo_home.jpg'
 
 // Styles
