@@ -1,6 +1,6 @@
 <h1 align="center"><a href="https://jonahlouis4.github.io/StudyBuddy/">jonahlouis.ca - V3</a></h1>
 <p align="center">Third version of my <b>portfolio</b>made with <a href="https://ant.design/" target="_blank">Ant Design</a> & <a href="https://reactjs.org/docs/hooks-overview.html" target="_blank">React</a>.</p>
-<div align="center"><img src="src/images/demo.png" width="80%" height="80%"></div>
+<div align="center"><img src="src/images/demo.png" width="95%" height="95%"></div>
 
 ## :ballot_box_with_check: Project Goals
  - Implement a **modern** & **fully responsive** website using **Ant Design**.
