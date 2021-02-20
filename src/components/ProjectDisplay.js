@@ -33,7 +33,7 @@ const ProjectDisplay = ({iconName, projectName, description, github, url, disabl
     /** Returns an active or disabled URL link depending on the disabled parameter*/
     function urlActive() {
         if (!disabled) {
-            return <a href={url} target="_blank"><ExportOutlined key="url" /></a>
+            return <a href={url} target="_blank" rel="noreferrer"><ExportOutlined key="url" /></a>
         } else {
             return <ExportOutlined key="url" style={{cursor: 'not-allowed', fontSize: '14px'}}/>
         }
@@ -43,7 +43,7 @@ const ProjectDisplay = ({iconName, projectName, description, github, url, disabl
         <Card
         hoverable
         actions={[
-            <a href={github} target="_blank"><GithubOutlined key="github" /></a>,
+            <a href={github} target="_blank" rel="noreferrer"><GithubOutlined key="github" /></a>,
             urlActive()
             ]}
         >
