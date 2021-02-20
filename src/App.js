@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import './App.less'
 
-import { BackTop, Button, Popover } from 'antd'
-import { ArrowUpOutlined } from '@ant-design/icons'
+import BackTop from 'antd/lib/back-top'
+import Button from 'antd/lib/button'
+import Popover  from 'antd/lib/popover'
+import ArrowUpOutlined from '@ant-design/icons/ArrowUpOutlined'
+
 import Header from './components/Header'
 import SideNav from './components/SideNav'
 import Introduction from './components/Introduction'
