@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+import Resume from '../files/Jonah-Resume.pdf'
 
 import { motion } from "framer-motion"
 import Button from 'antd/lib/button'
@@ -116,7 +117,10 @@ const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
                     variants={sectionVariant} 
                     style={{display: 'inline-block'}}
                     >
-                        <Button style={sectionBtn} className="section-sections sLink" >{sectionName.section3}</Button>
+                        <a href={Resume} target="_blank" rel='noopener noreferrer'>
+                            <Button style={sectionBtn} className="section-sections sLink" >{sectionName.section3}</Button>
+                        </a>
+                        
                     </motion.div>
                     <motion.div
                     variants={menuVariant} 

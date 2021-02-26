@@ -1,5 +1,6 @@
 import React from 'react'
 import './SideNav.css'
+import Resume from '../files/Jonah-Resume.pdf'
 
 import Typography from 'antd/lib/typography'
 import Button from 'antd/lib/button'
@@ -56,7 +57,9 @@ const SideNav = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
             <CloseOutlined style={closeBtn} onClick={navControl} className="options"/>
             <a href={'#'+sectionLink.section1}><Text type="secondary" className="options">{sectionName.section1}</Text></a>
             <a href={'#'+sectionLink.section2}><Text type="secondary" className="options">{sectionName.section2}</Text></a>
-            <Button id="option-btn" size="large">{sectionName.section3}</Button>
+            <a href={Resume} target="_blank" rel='noopener noreferrer'>
+                <Button id="option-btn" size="large">{sectionName.section3}</Button>
+            </a>
         </div>
     )
 }
