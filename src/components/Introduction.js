@@ -8,6 +8,7 @@ import Button from 'antd/lib/button'
 import Avatar from 'antd/lib/avatar'
 import Space from 'antd/lib/space'
 import GithubOutlined from '@ant-design/icons/GithubOutlined'
+import LinkedinOutlined from '@ant-design/icons/LinkedinOutlined'
 import user from '../images/jonah.jpg'
 
 const { Title } = Typography;
@@ -83,6 +84,13 @@ const Introduction = () => {
                             variants={elementVariant}
                             >
                                 <Button shape="circle" icon={<GithubOutlined />} />
+                            </motion.a>
+                            <motion.a 
+                            href="https://www.linkedin.com/in/jonah-louis-3b71791b8/" 
+                            target="_blank"
+                            variants={elementVariant}
+                            >
+                                <Button shape="circle" icon={<LinkedinOutlined /> } />
                             </motion.a>
                         </Space>
                     </div>
