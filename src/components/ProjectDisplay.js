@@ -3,7 +3,6 @@ import React from 'react'
 import Card from 'antd/lib/card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReact } from '@fortawesome/free-brands-svg-icons/faReact'
-import { faPhp } from '@fortawesome/free-brands-svg-icons/faPhp'
 import { GithubOutlined, ExportOutlined } from '@ant-design/icons';
 
 const { Meta } = Card;
@@ -24,10 +23,11 @@ const ProjectDisplay = ({iconName, projectName, description, github, url, disabl
         if (iconName === "faReact") {
             // Color = #00d8ff
             return <FontAwesomeIcon icon={faReact} size="4x"/>
-        } else if (iconName === "faPhp") {
-            // Color = #8993be
-            return <FontAwesomeIcon icon={faPhp} size="4x"/>
-        }
+        } 
+        // else if (iconName === "faPhp") {
+        //     // Color = #8993be
+        //     return <FontAwesomeIcon icon={faPhp} size="4x"/>
+        // }
     }
 
     /** Returns an active or disabled URL link depending on the disabled parameter*/
