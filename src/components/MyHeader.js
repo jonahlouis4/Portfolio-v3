@@ -1,5 +1,4 @@
 import React from 'react'
-import '../css/Header.css'
 import Resume from '../files/Jonah_Louis_Resume.pdf'
 
 import { motion } from "framer-motion"
@@ -29,7 +28,7 @@ const homeLink = {
 
 const menuIcon = {
     fontSize: '25px',
-    marginTop: '2px'
+    marginTop: '20px'
 }
 
 const sections = {
@@ -88,10 +87,23 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
         initial="hidden"
         animate="visible"
         variants={contVariant}
+        className="nav-content"
         >
-            <motion.a href="/" style={homeLink} variants={sectionVariant}><img src={logo} width='45' alt="Jonah's logo"/></motion.a>
+            <motion.a href="/" style={homeLink} variants={sectionVariant}><img src={logo} width='40' alt="Jonah's logo"/></motion.a>
             <div
+            style={{float:'right'}}
             >
+                {/* Hamburger */}
+                <motion.div
+                
+                initial="hidden"
+                animate="visible"
+                whileHover="hover"
+                whileTap="tap"
+                >
+                    <MenuOutlined style={menuIcon} className="section-menu" onClick={navControl}/>
+                </motion.div>   
+                {/* Section 1 */}
                 <motion.a
                 href={'#'+sectionLink.section1} 
                 style={sections} 
@@ -100,6 +112,7 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
                 >
                     {sectionName.section1}
                 </motion.a>
+                {/* Section 2 */}
                 <motion.a 
                 href={'#'+sectionLink.section2} 
                 style={sections} 
@@ -108,6 +121,7 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
                 >
                     {sectionName.section2}
                 </motion.a>
+                {/* Resume btn */}
                 <motion.div
                 variants={sectionVariant} 
                 style={{display: 'inline-block'}}
@@ -116,16 +130,7 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
                         <Button style={sectionBtn} className="section-sections sLink" >{sectionName.section3}</Button>
                     </a>
                     
-                </motion.div>
-                <motion.div
-                variants={menuVariant} 
-                initial="hidden"
-                animate="visible"
-                whileHover="hover"
-                whileTap="tap"
-                >
-                    <MenuOutlined style={menuIcon} className="section-menu" onClick={navControl}/>
-                </motion.div>             
+                </motion.div>          
             </div>
         </motion.div>
     )

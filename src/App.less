@@ -6,43 +6,50 @@
 /* 
 ======= UNIVERSAL BACKGROUND =======
 */
-.container-bg-1 {
-    background: rgb(89,126,247);
-    background: linear-gradient(90deg, rgba(89,126,247,1) 0%, rgba(47,84,235,1) 100%);
-}
-.container-bg-2 {
-    background-color: #1f1f1f,
+    .container-bg-1 {
+        background: rgb(89,126,247);
+        background: linear-gradient(90deg, rgba(89,126,247,1) 0%, rgba(47,84,235,1) 100%);
+    }
+    .container-bg-2 {
+        background-color: #1f1f1f,
 }
 /* 
 ======= CONTAINER OPACITY =======
 Class changes according to side nav
 */
-.content-bg-df { background-color: none; }
-.content-bg-blur { background-color: rgba(0,0,0,0.4); }
+    .content-bg-df { background-color: none; }
+    .content-bg-blur { background-color: rgba(0,0,0,0.4); }
 
 /* 
 ======= UNIVERSAL CSS FOR RESPONSIVENESS =======
 Note: All widths are with correspondance with AntDesign
 */
-/* Main Container */
-.container { width: 900px; margin: 0 auto;}
-/* Main Nav bar */
-.nav { 
-    width: 1000px; 
-    margin: auto; 
-    border: 1px solid red;
-}
-    .section-menu { display: none;}
-/* Side Navigation */
-.sideNav-open { width: 250px; }
-.sideNav-close { width: 0px; }
-/* Technologies Grid */
-.gridStyle { width: 50%; }
+    /* Main Container */
+    .container { width: 900px; margin: 0 auto;}
+    /* Main Nav bar */
+    .nav-content { 
+        width: 55%;
+        margin: 0 auto;
+    }
+        .section-menu { display: none;}
+    /* Side Navigation */
+    .sideNav-open { width: 250px; }
+    .sideNav-close { width: 0px; }
+    /* Technologies Grid */
+    .gridStyle { width: 50%; }
+
+/* 
+======= MYHeader.css =======
+*/
+    .sLink {
+        margin-left: 25px;
+    }
+    
 
 /* xs */
 @media only screen and (max-width: 576px) {
     .container { width: 95%; }
-    .nav { width: 95%; }
+    .nav-content { width: 95%; }
         .section-sections.sLink { display: none; }
         .section-menu { display: block;}
     .introduction-container { margin: 100px 0 !important; text-align: center; }
@@ -53,9 +60,9 @@ Note: All widths are with correspondance with AntDesign
 /* sm */
 @media only screen and (min-width: 577px) and (max-width: 768px) {
     .container { width: 550px; }
-    .nav { width: 550px; }
+    .nav-content { width: 550px; }
         .section-sections.sLink { display: none; }
-        .section-menu { display: block;}
+        .section-menu { display: inline-block; }
     .introduction-container { margin: 150px 0 !important; text-align: center; }
         .intro-picture { padding-top: 50px; }
 }
@@ -63,7 +70,7 @@ Note: All widths are with correspondance with AntDesign
 /* md */
 @media only screen and (min-width: 769px) and (max-width: 992px) {
     .container { width: 650px; }
-    .nav { width: 650px; }
+    .nav-content { width: 650px; }
     .sideNav-open { width: 0; }
     #intro-left { padding-right: 10px; }
     .intro-picture { padding-top: 25px; }
@@ -71,7 +78,7 @@ Note: All widths are with correspondance with AntDesign
 
 /* lg */
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    .nav { width: 850px; }
+    .nav-content { width: 850px; }
     .sideNav-open { width: 0; }
 }
 
