@@ -40,24 +40,20 @@ const MyFooter = () => {
                 xs={24} sm={24} md={12}
                 className="footer-icons"
                 >
-                    <Button type="link" style={{marginRight:'0.5rem'}} className="footer-link" icon={<GithubFilled/>} >
-                        <a
-                        href="https://github.com/jonahlouis4"
-                        target="_blank"
-                        rel="noreferrer"
-                        >
-                            Github                           
-                        </a>
-                    </Button>
-                    <Button type="link" className="footer-link" icon={<LinkedinFilled/>} >
-                        <a
-                        href="https://www.linkedin.com/in/jonah-louis-3b71791b8/"
-                        target="_blank"
-                        rel="noreferrer"
-                        >
-                            LinkedIn                           
-                        </a>
-                    </Button>
+                    <a
+                    href="https://github.com/jonahlouis4"
+                    target="_blank"
+                    rel="noreferrer"
+                    >
+                        <Button type="link" className="footer-link" style={{marginRight:'0.5rem'}} icon={<GithubFilled/>} >Github </Button>
+                    </a>
+                    <a
+                    href="https://www.linkedin.com/in/jonah-louis-3b71791b8/"
+                    target="_blank"
+                    rel="noreferrer"
+                    >
+                        <Button type="link" className="footer-link" icon={<LinkedinFilled/>} >LinkedIn</Button>
+                    </a>
                 </Col>
             </Row>
             
