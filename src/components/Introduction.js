@@ -75,7 +75,7 @@ const Introduction = () => {
                     <motion.div 
                     variants={elementVariant}
                     >
-                        <Button href="mailto:jonah_louis@outlook.com" size="large" >Contact me</Button>   
+                        <Button href="mailto:jonah_louis@outlook.com" size="large" >Get In Touch</Button>   
                     </motion.div>
                 </Space>
             </div>
