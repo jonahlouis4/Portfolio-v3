@@ -121,6 +121,7 @@ const Projects = () => {
                       <a 
                       href="https://github.com/jonahlouis4?tab=repositories"
                       target="_blank"
+                      rel="noreferrer"
                       >
                           View All
                       </a>

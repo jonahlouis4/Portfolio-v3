@@ -124,6 +124,7 @@ const Contribution = () => {
                                 <a 
                                 href="https://www.algonquincollege.com/arie/2021/03/caremada-task-list-and-activity-feed/"
                                 target="_blank"
+                                rel="noreferrer"
                                 >
                                     Read More
                                 </a>
