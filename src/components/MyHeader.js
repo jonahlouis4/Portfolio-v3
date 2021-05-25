@@ -6,28 +6,6 @@ import Button from 'antd/lib/button'
 import MenuOutlined from '@ant-design/icons/MenuOutlined'
 import logo from '../images/_Logo.svg'
 
-// Styles
-const homeLink = { 
-    float: 'left',
-    margin: '0',
-    padding: '0',
-}
-
-const menuIcon = {
-    fontSize: '25px',
-    marginTop: '20px'
-}
-
-const sections = {
-    fontSize: '16px',
-    fontWeight: '100',
-    marginTop: '20px',
-}
-
-const sectionBtn = {
-    marginTop: '20px',
-}
-
 // Variants
 const contVariant = {
     visible: { 
@@ -66,7 +44,7 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
         variants={contVariant}
         className="container nav-container"
         >
-            <motion.a href="/" style={homeLink} variants={sectionVariant}><img src={logo} width='40' alt="Jonah's logo"/></motion.a>
+            <motion.a href="/" className="home-icon" variants={sectionVariant}><img src={logo} width='40' alt="Jonah's logo"/></motion.a>
             <div
             style={{float:'right'}}
             >
@@ -78,13 +56,12 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
                 whileHover="hover"
                 whileTap="tap"
                 >
-                    <MenuOutlined style={menuIcon} className="section-menu" onClick={navControl}/>
+                    <MenuOutlined className="section-menu menu-icon" onClick={navControl}/>
                 </motion.div>   
                 {/* Section 1 */}
                 <motion.a
                 href={'#'+sectionLink.section1} 
-                style={sections} 
-                className="section-sections sLink"
+                className="section-link section"
                 variants={sectionVariant} 
                 >
                     {sectionName.section1}
@@ -92,8 +69,7 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
                 {/* Section 2 */}
                 <motion.a 
                 href={'#'+sectionLink.section2} 
-                style={sections} 
-                className="section-sections sLink" 
+                className="section-link section" 
                 variants={sectionVariant} 
                 >
                     {sectionName.section2}
@@ -104,7 +80,7 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
                 style={{display: 'inline-block'}}
                 >
                     <a href={Resume} target="_blank" rel='noopener noreferrer'>
-                        <Button style={sectionBtn} className="section-sections sLink" >{sectionName.section3}</Button>
+                        <Button id="resume-btn-nav" className="section-link" >{sectionName.section3}</Button>
                     </a>
                     
                 </motion.div>          

@@ -65,7 +65,7 @@ const Introduction = () => {
                 id="intro-left"
                 >
                     <motion.div variants={elementVariant}>
-                        <Title style={headerTitle}>I'm Jonah,</Title>
+                        <Title className style={headerTitle}>I'm Jonah,</Title>
                     </motion.div>
                     <motion.div variants={elementVariant}>
                         <Title level={3} style={subHeaderTitle} type="secondary">
