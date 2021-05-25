@@ -1,4 +1,8 @@
 import React from 'react'
+
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
+import Divider from 'antd/lib/divider';
 import HeartFilled from '@ant-design/icons/HeartFilled'
 import Typography from 'antd/lib/typography'
 
@@ -19,7 +23,26 @@ const MyFooter = () => {
         <div
         className="footer-container"
         >
-            <Text level={5} style={footerTitle}>Made with <HeartFilled style={heartColor}/> by Jonah Louis</Text>
+            <Row>
+                <Col
+                xs={24} sm={24} md={12}
+                style={{border:'1px solid red'}}
+                >
+                    <Text level={5} style={footerTitle}>
+                        Made with <HeartFilled style={heartColor}/> by Jonah Louis
+                    </Text>
+                </Col>
+                <Col
+                xs={24} sm={24} md={12}
+                style={{border:'1px solid red'}}
+                className="footer-icons"
+                >
+                    <Text level={5} style={footerTitle}>
+                        Made with <HeartFilled style={heartColor}/> by Jonah Louis
+                    </Text>
+                </Col>
+            </Row>
+            
         </div>
     )
 }
