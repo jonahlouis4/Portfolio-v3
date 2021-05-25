@@ -12,7 +12,7 @@ module.exports = {
               '@layout-header-background': '#ffffff',
               '@layout-header-padding': '0',
               '@layout-body-background': '#ffffff',
-              '@link-color': '@black'
+              '@link-color': '@black',
             },
             javascriptEnabled: true,
           },

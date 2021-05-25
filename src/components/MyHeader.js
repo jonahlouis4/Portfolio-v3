@@ -2,6 +2,7 @@ import React from 'react'
 import Resume from '../files/Jonah_Louis_Resume.pdf'
 
 import { motion } from "framer-motion"
+import Menu from 'antd/lib/menu'
 import Button from 'antd/lib/button'
 import MenuOutlined from '@ant-design/icons/MenuOutlined'
 import logo from '../images/_Logo.svg'
@@ -44,47 +45,26 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
         variants={contVariant}
         className="container nav-container"
         >
-            <motion.a href="/" className="home-icon" variants={sectionVariant}><img src={logo} width='40' alt="Jonah's logo"/></motion.a>
-            <div
-            className="section-container"
-            >
+            <Menu mode="horizontal" >
+                {/* logo */}
+                <motion.a href="/" className="home-icon" variants={sectionVariant}>
+                    <img src={logo} width='40' alt="Jonah's logo"/>
+                    </motion.a>
                 {/* Hamburger */}
-                <motion.div
-                
-                initial="hidden"
-                animate="visible"
-                whileHover="hover"
-                whileTap="tap"
-                >
-                    <MenuOutlined className="section-menu menu-icon" onClick={navControl}/>
-                </motion.div>   
-                {/* Section 1 */}
-                <motion.a
-                href={'#'+sectionLink.section1} 
-                className="section-link section"
-                variants={sectionVariant} 
-                >
-                    {sectionName.section1}
+                <MenuOutlined style={{float:'right'}} className="section-menu menu-icon" onClick={navControl}/>
+                {/* Resume btn */}
+                <motion.a style={{float:'right'}} className="section-link" variants={sectionVariant} href={Resume} target="_blank" rel='noopener noreferrer'>
+                    <Button>{ sectionName.section3 }</Button>
                 </motion.a>
                 {/* Section 2 */}
-                <motion.a 
-                href={'#'+sectionLink.section2} 
-                className="section-link section" 
-                variants={sectionVariant} 
-                >
-                    {sectionName.section2}
-                </motion.a>
-                {/* Resume btn */}
-                <motion.div
-                variants={sectionVariant} 
-                style={{display: 'inline-block'}}
-                >
-                    <a href={Resume} target="_blank" rel='noopener noreferrer'>
-                        <Button id="resume-btn-nav" className="section-link" type="primary">{sectionName.section3}</Button>
-                    </a>
-                    
-                </motion.div>          
-            </div>
+                <Menu.Item key="2" style={{float:'right'}} className="section-link">
+                    <motion.a variants={sectionVariant} href={'#'+sectionLink.section2}>{ sectionName.section2 }</motion.a>
+                    </Menu.Item>
+                {/* Section 1 */}
+                <Menu.Item key="3" style={{float:'right'}} className="section-link">
+                    <motion.a variants={sectionVariant} href={'#'+sectionLink.section1}>{ sectionName.section1 }</motion.a>
+                </Menu.Item>
+            </Menu>
         </motion.div>
     )
 }
