@@ -2,9 +2,11 @@ import React from 'react'
 
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
-import Divider from 'antd/lib/divider';
-import HeartFilled from '@ant-design/icons/HeartFilled'
+import Button from 'antd/lib/button'
 import Typography from 'antd/lib/typography'
+import HeartFilled from '@ant-design/icons/HeartFilled'
+import GithubFilled from '@ant-design/icons/GithubFilled'
+import LinkedinFilled from '@ant-design/icons/LinkedinFilled'
 
 const { Text } = Typography
 
@@ -23,10 +25,11 @@ const MyFooter = () => {
         <div
         className="footer-container"
         >
-            <Row>
+            <Row
+            align="middle"
+            >
                 <Col
                 xs={24} sm={24} md={12}
-                style={{border:'1px solid red'}}
                 >
                     <Text level={5} style={footerTitle}>
                         Made with <HeartFilled style={heartColor}/> by Jonah Louis
@@ -34,12 +37,14 @@ const MyFooter = () => {
                 </Col>
                 <Col
                 xs={24} sm={24} md={12}
-                style={{border:'1px solid red'}}
                 className="footer-icons"
                 >
-                    <Text level={5} style={footerTitle}>
-                        Made with <HeartFilled style={heartColor}/> by Jonah Louis
-                    </Text>
+                    <Button type="link" style={{marginRight:'0.5rem'}} className="footer-link" icon={<GithubFilled/>} >
+                        Github
+                    </Button>
+                    <Button type="link" className="footer-link" icon={<LinkedinFilled/>} >
+                        LinkedIn
+                    </Button>
                 </Col>
             </Row>
             
