@@ -77,21 +77,21 @@ const Introduction = () => {
                     <motion.div 
                     variants={elementVariant}
                     >
-                        <Button href="mailto:jonah_louis@outlook.com">Contact me</Button>   
+                        <Button href="mailto:jonah_louis@outlook.com" size="large" >Contact me</Button>   
                     </motion.div>
                     <motion.a 
                     href="https://github.com/jonahlouis4" 
                     target="_blank"
                     variants={elementVariant}
                     >
-                        <Button shape="circle" icon={<GithubOutlined />} />
+                        <Button shape="circle" size="large" icon={<GithubOutlined />} />
                     </motion.a>
                     <motion.a 
                     href="https://www.linkedin.com/in/jonah-louis-3b71791b8/" 
                     target="_blank"
                     variants={elementVariant}
                     >
-                        <Button shape="circle" icon={<LinkedinOutlined /> } />
+                        <Button shape="circle" size="large" icon={<LinkedinOutlined /> } />
                     </motion.a>
                 </Space>
             </div>

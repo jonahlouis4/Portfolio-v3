@@ -80,7 +80,7 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
                 style={{display: 'inline-block'}}
                 >
                     <a href={Resume} target="_blank" rel='noopener noreferrer'>
-                        <Button id="resume-btn-nav" className="section-link" >{sectionName.section3}</Button>
+                        <Button id="resume-btn-nav" className="section-link" type="primary">{sectionName.section3}</Button>
                     </a>
                     
                 </motion.div>          
