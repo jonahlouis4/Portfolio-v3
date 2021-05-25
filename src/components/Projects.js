@@ -134,7 +134,7 @@ const Projects = () => {
             style={{textAlign: 'center'}}
             variants={titleVariant}
             >
-                <Title style={sectionTitle}>My <span style={{fontWeight: '500'}}>Projects</span></Title>
+                <Title style={sectionTitle}>Featured <span style={{fontWeight: '500'}}>Projects</span></Title>
             </motion.div>
             {/* Projects */}
             <div
