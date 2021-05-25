@@ -67,11 +67,9 @@ function App() {
               <Technologies />
             </div>
         </Content>
-        <Footer>
-          <div className="container-bg-2">
-            <div className="container">
-              <MyFooter />
-            </div>
+        <Footer className="container-bg-2">
+          <div className="container">
+            <MyFooter />
           </div>
         </Footer>
         {/* Back to top button */}
