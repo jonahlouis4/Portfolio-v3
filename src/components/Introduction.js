@@ -19,10 +19,6 @@ const subHeaderTitle = {
     fontWeight: '400',
     marginBottom: '18px'
 }
-const colorFont = {
-    color: '#2f54eb',
-    fontWeight: '500'
-}
 
 // Variants
 const contVariant = {

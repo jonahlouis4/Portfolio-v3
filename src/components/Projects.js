@@ -14,7 +14,6 @@ const { Title } = Typography;
 const sectionTitle = {
     fontSize: '30px',
     fontWeight: '100',
-    color: 'white',
     margin: '0',
     padding: '0'
 }
