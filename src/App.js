@@ -68,14 +68,12 @@ function App() {
             </div>
           </div>
           {/* Section - Projects */}
-          <div className="" id={sectionLink.section1}>
+          <div className="container-bg-2" id={sectionLink.section1}>
             <div className="container">
               <Projects />
-            </div>
-          </div>
           {/* Section - Technologies */}
-          <div className="container" id={sectionLink.section2}>
-            <Technologies />
+              <Technologies id={sectionLink.section2}/>
+            </div>
           </div>
         </Content>
         <Footer className="container-bg-3">
