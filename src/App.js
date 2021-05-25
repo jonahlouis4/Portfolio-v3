@@ -72,6 +72,7 @@ function App() {
           <div className="container-bg-2" id={sectionLink.section1}>
             <div className="container">
               <Projects />
+              <Divider />
           {/* Section - Technologies */}
               <Technologies id={sectionLink.section2}/>
             </div>
