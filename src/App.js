@@ -1,17 +1,20 @@
 import { useState } from 'react'
 import './App.less'
 
+import Layout from 'antd/lib/layout';
 import BackTop from 'antd/lib/back-top'
 import Button from 'antd/lib/button'
 import Popover  from 'antd/lib/popover'
 import ArrowUpOutlined from '@ant-design/icons/ArrowUpOutlined'
 
-import Header from './components/Header'
+import MyHeader from './components/MyHeader'
 import SideNav from './components/SideNav'
 import Introduction from './components/Introduction'
 import Projects from './components/Projects'
 import Technologies from './components/Technologies'
-import Footer from './components/Footer'
+import MyFooter from './components/MyFooter'
+
+const { Header, Footer, Sider, Content } = Layout;
 
 const backTopBtnStyle = {
   backgroundColor: '#434343',
@@ -40,32 +43,37 @@ function App() {
   }
 
   return (
-    <>
+    <Layout>
       <SideNav isOpen={isOpen} sideNavControl={sideNavControl} sectionName={sectionName} sectionLink={sectionLink}/>
       <div
       className="body-content"
       >
-        <Header isOpen={isOpen} sideNavControl={sideNavControl} sectionName={sectionName} sectionLink={sectionLink}/>
+        <Header>
+          <MyHeader isOpen={isOpen} sideNavControl={sideNavControl} sectionName={sectionName} sectionLink={sectionLink}/>
+        </Header>
+        <Content>
         {/* Section - Introduction */}
         <div className="container">
           <Introduction />
-        </div>
-        {/* Section - Projects */}
-        <div className="container-bg-1" id={sectionLink.section1}>
-          <div className="container">
-            <Projects />
           </div>
-        </div>
-        {/* Section - Technologies */}
-        <div className="container" id={sectionLink.section2}>
-          <Technologies />
-        </div>
-        {/* Footer */}
-        <div className="container-bg-2">
-          <div className="container">
-            <Footer />
+          {/* Section - Projects */}
+          <div className="container-bg-1" id={sectionLink.section1}>
+            <div className="container">
+              <Projects />
+            </div>
           </div>
-        </div>
+          {/* Section - Technologies */}
+          <div className="container" id={sectionLink.section2}>
+            <Technologies />
+          </div>
+        </Content>
+        <Footer>
+          <div className="container-bg-2">
+            <div className="container">
+              <MyFooter />
+            </div>
+          </div>
+        </Footer>
         {/* Back to top button */}
         <BackTop>
           <Popover 
@@ -76,8 +84,7 @@ function App() {
           </Popover>
         </BackTop>
       </div>
-
-    </>
+    </Layout>
   );
 }
 

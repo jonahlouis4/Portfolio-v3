@@ -13,7 +13,7 @@ const footerTitle = {
 }
 
 /** Footer component of the website */
-const Footer = () => {
+const MyFooter = () => {
     return (
         <div
         style={footerContainer}
@@ -23,4 +23,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default MyFooter

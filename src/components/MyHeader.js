@@ -5,7 +5,7 @@ import Resume from '../files/Jonah_Louis_Resume.pdf'
 import { motion } from "framer-motion"
 import Button from 'antd/lib/button'
 import MenuOutlined from '@ant-design/icons/MenuOutlined'
-import logo from '../images/logo_home.jpg'
+import logo from '../images/_Logo.svg'
 
 // Styles
 const navContainer = {
@@ -73,7 +73,7 @@ const menuVariant = {
  * @param {string} sectionName - Contains the section's name
  * @param {string} sectionLink - Contains the section's link
  */
-const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
+const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
     /** Sets isOpen useState to true */
     const navControl = () => {
         var open = isOpen;
@@ -93,7 +93,7 @@ const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
             <div 
             className="nav"
             >
-                <motion.a href="/" style={homeLink} variants={sectionVariant}><img src={logo} width='70' alt=""/></motion.a>
+                <motion.a href="/" style={homeLink} variants={sectionVariant}><img src={logo} width='45' alt="Jonah's logo"/></motion.a>
                 <div
                 style={sectionContainer}
                 >
@@ -137,4 +137,4 @@ const Header = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
     )
 }
 
-export default Header
+export default MyHeader
