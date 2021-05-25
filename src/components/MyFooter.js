@@ -41,10 +41,22 @@ const MyFooter = () => {
                 className="footer-icons"
                 >
                     <Button type="link" style={{marginRight:'0.5rem'}} className="footer-link" icon={<GithubFilled/>} >
-                        Github
+                        <a
+                        href="https://github.com/jonahlouis4"
+                        target="_blank"
+                        ref="noreferrer"
+                        >
+                            Github                           
+                        </a>
                     </Button>
                     <Button type="link" className="footer-link" icon={<LinkedinFilled/>} >
-                        LinkedIn
+                        <a
+                        href="https://www.linkedin.com/in/jonah-louis-3b71791b8/"
+                        target="_blank"
+                        ref="noreferrer"
+                        >
+                            LinkedIn                           
+                        </a>
                     </Button>
                 </Col>
             </Row>
