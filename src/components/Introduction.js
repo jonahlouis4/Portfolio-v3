@@ -1,8 +1,6 @@
 import React from 'react'
 
 import { motion } from 'framer-motion'
-import Row from 'antd/lib/row'
-import Col from 'antd/lib/col'
 import Typography from 'antd/lib/typography'
 import Button from 'antd/lib/button'
 import Avatar from 'antd/lib/avatar'
@@ -17,11 +15,11 @@ const { Title } = Typography;
 const headerTitle = {
     fontSize: '56px',
     fontWeight: '500',
-
+    marginBottom: '18px'
 }
 const subHeaderTitle = {
     fontWeight: '400',
-
+    marginBottom: '18px'
 }
 const colorFont = {
     color: '#2f54eb',
@@ -56,22 +54,29 @@ const Introduction = () => {
             <motion.div 
             variants={elementVariant}
             >
-                <Title style={headerTitle}>Front-end web developer.</Title>
+                <Title className="intro-header">Front-end web developer.</Title>
             </motion.div>
             {/* SubHeader */}
             <motion.div 
             variants={elementVariant}
             >
-                <Title level={3} style={subHeaderTitle} type="secondary">
-                    Hello there, I'm <span style={colorFont}>Jonah</span>. I specialize in creating beautiful things for the web.
+                <Title 
+                level={3} 
+                style={subHeaderTitle} 
+                type="secondary"
+                >
+                    Hi, I'm <span style={colorFont}>Jonah</span>. I specialize & just love creating beautiful things for the web.
                 </Title>
             </motion.div>
             {/* Call to Action */}
             <div
-            style={{marginTop: '10px'}}
             >
-                <Space size="small">
-                    <motion.div variants={elementVariant}>
+                <Space 
+                size="small"
+                >
+                    <motion.div 
+                    variants={elementVariant}
+                    >
                         <Button href="mailto:jonah_louis@outlook.com">Contact me</Button>   
                     </motion.div>
                     <motion.a 
@@ -91,7 +96,10 @@ const Introduction = () => {
                 </Space>
             </div>
             {/* Picture/Avatar */}
-            <motion.div variants={elementVariant}>
+            <motion.div 
+            variants={elementVariant}
+            className="intro-avatar"
+            >
                 <Avatar
                     size={{ xs: 180, sm: 180, md: 180, lg: 180, xl: 220, xxl: 250 }}
                     src={user}
