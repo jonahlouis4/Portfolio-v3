@@ -27,7 +27,7 @@ function App() {
   /** Contains the section names for the navigation */
   const [sectionName] = useState({section0: "Contributions", section1: "Projects", section2: "Skills", section3: "Resume"})
   /** Contains the sections links for the navigation */
-  const [sectionLink] = useState({section: "contribution-section", section1: "project-section", section2: "skill-section"})
+  const [sectionLink] = useState({section0: "contribution-section", section1: "project-section", section2: "skill-section"})
   /** Determines wether the side navigation is opened (isOpen = true), or closed (isOpen = false) */
   const [isOpen, setIsOpen] = useState(false);
 

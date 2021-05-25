@@ -64,6 +64,10 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
                 <Menu.Item key="3" style={{float:'right'}} className="section-link">
                     <motion.a variants={sectionVariant} href={'#'+sectionLink.section1}>{ sectionName.section1 }</motion.a>
                 </Menu.Item>
+                {/* Section 0 */}
+                <Menu.Item key="4" style={{float:'right'}} className="section-link">
+                    <motion.a variants={sectionVariant} href={'#'+sectionLink.section0}>{ sectionName.section0 }</motion.a>
+                </Menu.Item>
             </Menu>
         </motion.div>
     )
