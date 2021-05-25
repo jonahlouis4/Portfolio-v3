@@ -72,7 +72,7 @@ const Introduction = () => {
             <div
             >
                 <Space 
-                size="small"
+                size="middle"
                 >
                     <motion.div 
                     variants={elementVariant}
