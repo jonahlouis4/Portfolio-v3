@@ -10,11 +10,6 @@ import user from '../images/jonah.jpg'
 const { Title } = Typography;
 
 // Styles
-const headerTitle = {
-    fontSize: '56px',
-    fontWeight: '500',
-    marginBottom: '18px'
-}
 const subHeaderTitle = {
     fontWeight: '400',
     marginBottom: '18px'

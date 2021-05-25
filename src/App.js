@@ -16,7 +16,7 @@ import Projects from './components/Projects'
 import Technologies from './components/Technologies'
 import MyFooter from './components/MyFooter'
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Footer, Content } = Layout;
 
 const backTopBtnStyle = {
   backgroundColor: '#434343',
