@@ -65,7 +65,7 @@ const Introduction = () => {
                 style={subHeaderTitle} 
                 type="secondary"
                 >
-                    Hi, I'm <span style={colorFont}>Jonah</span>. I specialize in creating beautiful things for the web, & just love learning more.
+                    I specialize in creating beautiful things for the web, & just love what I do.
                 </Title>
             </motion.div>
             {/* Call to Action */}
