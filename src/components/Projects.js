@@ -66,11 +66,11 @@ const Projects = () => {
     /** Usestate of all projects - contains all project information */
     const [projects] = useState([
         {id: 1, iconName: "faReact", projectName: "StudyBuddy", 
-            description: "A simple flash card web application designed for studying. Contains the ability to add an extensive range of questions and includes a randomized order for every quiz.", 
+            description: "A simple flash card web application designed for studying. Ability to add an extensive range of questions and includes a randomized order for each quiz.", 
             github: "https://github.com/jonahlouis4/StudyBuddy", url:"https://jonahlouis4.github.io/StudyBuddy/",
             disabled: false },
         {id: 2, iconName: "faReact", projectName: "COVID-19 Tracker", 
-            description: "Global scale covid tracker of deaths, cases, and recoveries using a COVID API. Includes sorted charts and wide variety of Countries.",
+            description: "Global scale covid tracker of deaths, cases, and recoveries using a COVID API. Includes sorted charts, and summaries from a wide variety of Countries.",
             github: "https://github.com/jonahlouis4/COVID19-Tracker", url:"https://covid19-tracker2021.herokuapp.com/", disabled: false },
     ])
 
