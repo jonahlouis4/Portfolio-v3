@@ -65,7 +65,7 @@ const Introduction = () => {
                 style={subHeaderTitle} 
                 type="secondary"
                 >
-                    Hi, I'm <span style={colorFont}>Jonah</span>. I specialize & just love creating beautiful things for the web.
+                    Hi, I'm <span style={colorFont}>Jonah</span>. I specialize in creating beautiful things for the web, & just love learning more.
                 </Title>
             </motion.div>
             {/* Call to Action */}
@@ -98,11 +98,12 @@ const Introduction = () => {
             {/* Picture/Avatar */}
             <motion.div 
             variants={elementVariant}
-            className="intro-avatar"
+            className="intro-avatar-container"
             >
                 <Avatar
-                    size={{ xs: 180, sm: 180, md: 180, lg: 180, xl: 220, xxl: 250 }}
+                    size={{ xs: 230, sm: 230, md: 230, lg: 230, xl: 230, xxl: 250 }}
                     src={user}
+                    id="intro-avatar"
                 />
             </motion.div>
         </motion.div>
