@@ -10,6 +10,7 @@ import ArrowUpOutlined from '@ant-design/icons/ArrowUpOutlined'
 import MyHeader from './components/MyHeader'
 import SideNav from './components/SideNav'
 import Introduction from './components/Introduction'
+import Contribution from './components/Contribution'
 import Projects from './components/Projects'
 import Technologies from './components/Technologies'
 import MyFooter from './components/MyFooter'
@@ -23,9 +24,9 @@ const backTopBtnStyle = {
 
 function App() {
   /** Contains the section names for the navigation */
-  const [sectionName] = useState({section1: "Projects", section2: "Skills", section3: "Resume"})
+  const [sectionName] = useState({section0: "Contributions", section1: "Projects", section2: "Skills", section3: "Resume"})
   /** Contains the sections links for the navigation */
-  const [sectionLink] = useState({section1: "project-section", section2: "skill-section"})
+  const [sectionLink] = useState({section: "contribution-section", section1: "project-section", section2: "skill-section"})
   /** Determines wether the side navigation is opened (isOpen = true), or closed (isOpen = false) */
   const [isOpen, setIsOpen] = useState(false);
 
@@ -58,6 +59,12 @@ function App() {
             className="container"
             >
               <Introduction />
+            </div>
+          </div>
+          {/* Section - Contribution */}
+          <div className="container-bg-1" id={sectionLink.section0}>
+            <div className="container">
+              <Contribution />
             </div>
           </div>
           {/* Section - Projects */}
