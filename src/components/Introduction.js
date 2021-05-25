@@ -43,7 +43,7 @@ const elementVariant = {
 const Introduction = () => {
     return (
         <motion.div
-        className="introduction-container"
+        className="introduction-container section-container"
         initial="hidden"
         animate="visible"
         variants={contVariant}        

@@ -84,33 +84,32 @@ const Projects = () => {
     }, [controls, inView]);
 
     return (
-        
+        <motion.div
+        style={{padding:'125px 0'}}
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={contVariant}
+        >
             <motion.div
-            style={{padding:'125px 0'}}
-            ref={ref}
-            animate={controls}
-            initial="hidden"
-            variants={contVariant}
+            style={{textAlign: 'center'}}
+            variants={titleVariant}
             >
-                <motion.div
-                style={{textAlign: 'center'}}
-                variants={titleVariant}
-                >
-                    <Title style={sectionTitle}>Some <span style={{fontWeight: '500'}}>Projects</span> I accomplished.</Title>
-                </motion.div>
-                <motion.div
-                style={{paddingTop: '75px'}}
-                variants={projectVariant}
-                >
-                    <Row 
-                    justify="space-between"
-                    gutter={[0, 48]}
-                    >
-                        {/* Display all cards */}
-                        {cardDisplay}
-                    </Row>
-                </motion.div>
+                <Title style={sectionTitle}>Some <span style={{fontWeight: '500'}}>Projects</span> I accomplished.</Title>
             </motion.div>
+            <motion.div
+            style={{paddingTop: '75px'}}
+            variants={projectVariant}
+            >
+                <Row 
+                justify="space-between"
+                gutter={[0, 48]}
+                >
+                    {/* Display all cards */}
+                    {cardDisplay}
+                </Row>
+            </motion.div>
+        </motion.div>
         
 
     )
