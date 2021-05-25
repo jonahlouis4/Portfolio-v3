@@ -89,48 +89,43 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
         animate="visible"
         variants={contVariant}
         >
-            <div 
-            className="nav"
+            <motion.a href="/" style={homeLink} variants={sectionVariant}><img src={logo} width='45' alt="Jonah's logo"/></motion.a>
+            <div
             >
-                <motion.a href="/" style={homeLink} variants={sectionVariant}><img src={logo} width='45' alt="Jonah's logo"/></motion.a>
-                <div
-                style={sectionContainer}
+                <motion.a
+                href={'#'+sectionLink.section1} 
+                style={sections} 
+                className="section-sections sLink"
+                variants={sectionVariant} 
                 >
-                    <motion.a
-                    href={'#'+sectionLink.section1} 
-                    style={sections} 
-                    className="section-sections sLink"
-                    variants={sectionVariant} 
-                    >
-                        {sectionName.section1}
-                    </motion.a>
-                    <motion.a 
-                    href={'#'+sectionLink.section2} 
-                    style={sections} 
-                    className="section-sections sLink" 
-                    variants={sectionVariant} 
-                    >
-                        {sectionName.section2}
-                    </motion.a>
-                    <motion.div
-                    variants={sectionVariant} 
-                    style={{display: 'inline-block'}}
-                    >
-                        <a href={Resume} target="_blank" rel='noopener noreferrer'>
-                            <Button style={sectionBtn} className="section-sections sLink" >{sectionName.section3}</Button>
-                        </a>
-                        
-                    </motion.div>
-                    <motion.div
-                    variants={menuVariant} 
-                    initial="hidden"
-                    animate="visible"
-                    whileHover="hover"
-                    whileTap="tap"
-                    >
-                        <MenuOutlined style={menuIcon} className="section-menu" onClick={navControl}/>
-                    </motion.div>             
-                </div>
+                    {sectionName.section1}
+                </motion.a>
+                <motion.a 
+                href={'#'+sectionLink.section2} 
+                style={sections} 
+                className="section-sections sLink" 
+                variants={sectionVariant} 
+                >
+                    {sectionName.section2}
+                </motion.a>
+                <motion.div
+                variants={sectionVariant} 
+                style={{display: 'inline-block'}}
+                >
+                    <a href={Resume} target="_blank" rel='noopener noreferrer'>
+                        <Button style={sectionBtn} className="section-sections sLink" >{sectionName.section3}</Button>
+                    </a>
+                    
+                </motion.div>
+                <motion.div
+                variants={menuVariant} 
+                initial="hidden"
+                animate="visible"
+                whileHover="hover"
+                whileTap="tap"
+                >
+                    <MenuOutlined style={menuIcon} className="section-menu" onClick={navControl}/>
+                </motion.div>             
             </div>
         </motion.div>
     )
