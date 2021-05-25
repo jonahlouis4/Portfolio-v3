@@ -44,7 +44,7 @@ const MyFooter = () => {
                         <a
                         href="https://github.com/jonahlouis4"
                         target="_blank"
-                        ref="noreferrer"
+                        rel="noreferrer"
                         >
                             Github                           
                         </a>
@@ -53,7 +53,7 @@ const MyFooter = () => {
                         <a
                         href="https://www.linkedin.com/in/jonah-louis-3b71791b8/"
                         target="_blank"
-                        ref="noreferrer"
+                        rel="noreferrer"
                         >
                             LinkedIn                           
                         </a>

@@ -74,7 +74,9 @@ function App() {
               <Projects />
               <Divider />
           {/* Section - Technologies */}
-              <Technologies id={sectionLink.section2}/>
+              <div id={sectionLink.section2}>
+                <Technologies />
+              </div>
             </div>
           </div>
         </Content>
