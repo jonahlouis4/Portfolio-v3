@@ -62,7 +62,7 @@ function App() {
             </div>
           </div>
           {/* Section - Contribution */}
-          <div className="container-bg-1" id={sectionLink.section0}>
+          <div className="container-bg-1" id={sectionLink.section0} style={{border:'1px solid red'}}>
             <div className="container">
               <Contribution />
             </div>

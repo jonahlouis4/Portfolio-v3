@@ -14,11 +14,13 @@ const sectionTitle = {
 
 const Contribution = () => {
     return (
-        <div>
+        <div
+        className="section-container"
+        >
             <div
             style={{textAlign: 'center'}}
             >
-                <Title style={sectionTitle}>Some <span style={{fontWeight: '500'}}>Projects</span> I accomplished.</Title>
+                <Title className="section-header" id="contribution-header">My <span style={{fontWeight: '500'}}>Contributions</span></Title>
             </div>
         </div>
     )
