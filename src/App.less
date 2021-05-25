@@ -25,7 +25,9 @@ Class changes according to side nav
 Note: All widths are with correspondance with AntDesign
 */
     /* Main Container */
-    .container { width: 900px; margin: 0 auto;}
+    .container { 
+        margin: 0 auto;
+    }
         .section-menu { display: none;}
     /* Side Navigation */
     .sideNav-open { width: 250px; }
@@ -34,10 +36,9 @@ Note: All widths are with correspondance with AntDesign
     .gridStyle { width: 50%; }
 
 /* 
-======= MYHeader.css =======
+======= MyHeader.css =======
 */
     .nav-container { 
-        width: 55%;
         margin: 0 auto;
     }
     .sLink {
@@ -50,11 +51,25 @@ Note: All widths are with correspondance with AntDesign
     .container {
         max-width: 100%;
     }
-        .section-sections.sLink { display: none; }
-        .section-menu { display: block;}
-    .introduction-container { margin: 100px 0 !important; text-align: center; }
-        .intro-picture { padding-top: 50px; }
-    .gridStyle { width: 100%; }
+    .nav-container { 
+        max-width: 95%;
+    }
+    .section-sections.sLink { 
+        display: none; 
+    }
+    .section-menu { 
+        display: block;
+    }
+    .introduction-container { 
+        margin: 100px 0 !important; 
+        text-align: center; 
+    }
+        .intro-picture { 
+            padding-top: 50px; 
+        }
+    .gridStyle { 
+        width: 100%; 
+    }
 }
 
 /* sm */
@@ -62,8 +77,6 @@ Note: All widths are with correspondance with AntDesign
     .container {
         max-width: 540px;
     }
-        .section-sections.sLink { display: none; }
-        .section-menu { display: inline-block; }
     .introduction-container { margin: 150px 0 !important; text-align: center; }
         .intro-picture { padding-top: 50px; }
 }
@@ -83,8 +96,6 @@ Note: All widths are with correspondance with AntDesign
     .container {
         max-width: 960px;
     }
-    .nav-content { width: 850px; }
-    .sideNav-open { width: 0; }
 }
 
 /* xl */
@@ -92,7 +103,6 @@ Note: All widths are with correspondance with AntDesign
     .container {
         max-width: 1140px;
     }
-    .sideNav-open { width: 0; }
 }
 
 /* xxl */

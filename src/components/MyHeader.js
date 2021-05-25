@@ -7,19 +7,6 @@ import MenuOutlined from '@ant-design/icons/MenuOutlined'
 import logo from '../images/_Logo.svg'
 
 // Styles
-const navContainer = {
-    width: '100%',
-    display: 'inline-block',
-    margin: '0 auto',
-    boxShadow: '0 0 1px 0 rgba(0, 0, 0, 0.1), 0 0 12px 0 rgba(0, 0, 0, 0.1)',
-    padding: '0',
-}
-
-const sectionContainer = {
-    float: 'right',
-    fontWeight: "500",
-}
-
 const homeLink = { 
     float: 'left',
     margin: '0',
@@ -53,16 +40,6 @@ const contVariant = {
 const sectionVariant = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
     hidden: { opacity: 0, y: -50 }
-}
-
-const menuVariant = {
-    visible: { 
-        opacity: 1, scale: [1,1.5,1.5,1,1], rotate: [0,0,270,270,0],
-        transition: { duration: 2 },    
-    },
-    hidden: { opacity: 0 },
-    hover: { scale: 1.1 },
-    tap: { scale: 0.9 }
 }
 
 /**

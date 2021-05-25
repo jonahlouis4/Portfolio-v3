@@ -52,20 +52,20 @@ function App() {
           <MyHeader isOpen={isOpen} sideNavControl={sideNavControl} sectionName={sectionName} sectionLink={sectionLink}/>
         </Header>
         <Content>
-        {/* Section - Introduction */}
-        <div className="container">
-          <Introduction />
-          </div>
-          {/* Section - Projects */}
-          <div className="container-bg-1" id={sectionLink.section1}>
-            <div className="container">
-              <Projects />
+          {/* Section - Introduction */}
+          <div className="container">
+            <Introduction />
             </div>
-          </div>
-          {/* Section - Technologies */}
-          <div className="container" id={sectionLink.section2}>
-            <Technologies />
-          </div>
+            {/* Section - Projects */}
+            <div className="container-bg-1" id={sectionLink.section1}>
+              <div className="container">
+                <Projects />
+              </div>
+            </div>
+            {/* Section - Technologies */}
+            <div className="container" id={sectionLink.section2}>
+              <Technologies />
+            </div>
         </Content>
         <Footer>
           <div className="container-bg-2">
