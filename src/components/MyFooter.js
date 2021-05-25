@@ -12,7 +12,7 @@ const { Text } = Typography
 
 const footerTitle = {
     padding: '0',
-    color: 'white'
+    color: 'hsla(0,0%,100%,.9)'
 }
 
 const heartColor = {
@@ -27,6 +27,7 @@ const MyFooter = () => {
         >
             <Row
             align="middle"
+            gutter={[8, 12]}
             >
                 <Col
                 xs={24} sm={24} md={12}
