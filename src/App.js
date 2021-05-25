@@ -5,6 +5,7 @@ import Layout from 'antd/lib/layout';
 import BackTop from 'antd/lib/back-top'
 import Button from 'antd/lib/button'
 import Popover  from 'antd/lib/popover'
+import Divider from 'antd/lib/divider';
 import ArrowUpOutlined from '@ant-design/icons/ArrowUpOutlined'
 
 import MyHeader from './components/MyHeader'

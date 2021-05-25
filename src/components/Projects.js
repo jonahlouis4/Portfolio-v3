@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer';
 import ProjectDisplay from './ProjectDisplay'
+import { motion } from 'framer-motion'
+import { useAnimation } from 'framer-motion';
 
+import Button from 'antd/lib/button';
 import Typography from 'antd/lib/typography';
 import Col from 'antd/lib/col';
 import Row from 'antd/lib/row';
-import { motion } from 'framer-motion'
-import { useAnimation } from 'framer-motion';
 
 const { Title } = Typography;
 
@@ -16,6 +17,11 @@ const sectionTitle = {
     fontWeight: '100',
     margin: '0',
     padding: '0'
+}
+
+const projectBtn = {
+    textAlign: 'center',
+    marginTop: '1.5rem'
 }
 
 // Variants
@@ -33,7 +39,7 @@ const titleVariant = {
     hidden: { opacity:0 }
 }
 
-const projectVariant = {
+const elementVariant = {
     visible: { opacity: 1, scale: 1,
         transition: { duration: 0.5 }
     },
@@ -56,7 +62,7 @@ const Projects = () => {
     /** Card format for each project */
     const cardDisplay = projects.map(project => { return (
         <Col 
-        xs={{span:24}} sm={{span:24}} md={{span:11}} lg={{span:11}} xl={{span:11}}
+        xs={{span:24}} sm={{span:24}} md={{span:11}} lg={{span:11}} xl={{span:7}}
         key={project.id}
         >
             <ProjectDisplay 
@@ -84,7 +90,7 @@ const Projects = () => {
 
     return (
         <motion.div
-        style={{padding:'125px 0'}}
+        className="section-container"
         ref={ref}
         animate={controls}
         initial="hidden"
@@ -94,23 +100,34 @@ const Projects = () => {
             style={{textAlign: 'center'}}
             variants={titleVariant}
             >
-                <Title style={sectionTitle}>Some <span style={{fontWeight: '500'}}>Projects</span> I accomplished.</Title>
+                <Title style={sectionTitle}>My <span style={{fontWeight: '500'}}>Projects</span></Title>
             </motion.div>
             <motion.div
             style={{paddingTop: '75px'}}
-            variants={projectVariant}
+            variants={elementVariant}
             >
                 <Row 
-                justify="space-between"
-                gutter={[0, 48]}
+                justify="center"
+                gutter={[48, 48]}
                 >
                     {/* Display all cards */}
                     {cardDisplay}
                 </Row>
+                <motion.div
+                variants={elementVariant}
+                style={projectBtn}
+                >
+                    <Button>
+                      <a 
+                      href="https://github.com/jonahlouis4?tab=repositories"
+                      target="_blank"
+                      >
+                          View All
+                      </a>
+                    </Button>  
+                </motion.div>
             </motion.div>
         </motion.div>
-        
-
     )
 }
 
