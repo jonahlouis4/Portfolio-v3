@@ -54,7 +54,7 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
                 <MenuOutlined style={{float:'right'}} className="section-menu menu-icon" onClick={navControl}/>
                 {/* Resume btn */}
                 <motion.a style={{float:'right'}} className="section-link" variants={sectionVariant} href={Resume} target="_blank" rel='noopener noreferrer'>
-                    <Button>{ sectionName.section3 }</Button>
+                    <Button type="primary">{ sectionName.section3 }</Button>
                 </motion.a>
                 {/* Section 2 */}
                 <Menu.Item key="2" style={{float:'right'}} className="section-link">
