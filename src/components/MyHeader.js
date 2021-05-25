@@ -46,7 +46,7 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
         >
             <motion.a href="/" className="home-icon" variants={sectionVariant}><img src={logo} width='40' alt="Jonah's logo"/></motion.a>
             <div
-            style={{float:'right'}}
+            className="section-container"
             >
                 {/* Hamburger */}
                 <motion.div
