@@ -17,16 +17,12 @@ const { Title } = Typography;
 const headerTitle = {
     fontSize: '56px',
     fontWeight: '500',
-    margin: '0',
-    padding: '0'
-}
 
+}
 const subHeaderTitle = {
     fontWeight: '400',
-    margin: '0',
-    padding: '0'
-}
 
+}
 const colorFont = {
     color: '#2f54eb',
     fontWeight: '500'
@@ -51,64 +47,56 @@ const elementVariant = {
 const Introduction = () => {
     return (
         <motion.div
-        style={{margin: '200px 0'}}
         className="introduction-container"
         initial="hidden"
         animate="visible"
-        variants={contVariant}
-        style={{border:'1px solid red'}}
+        variants={contVariant}        
         >
-            <Row>
-                <Col 
-                xl={18} 
-                style={{ margin:'auto'}}
-                id="intro-left"
-                >
+            {/* Header */}
+            <motion.div 
+            variants={elementVariant}
+            >
+                <Title style={headerTitle}>Front-end web developer.</Title>
+            </motion.div>
+            {/* SubHeader */}
+            <motion.div 
+            variants={elementVariant}
+            >
+                <Title level={3} style={subHeaderTitle} type="secondary">
+                    Hello there, I'm <span style={colorFont}>Jonah</span>. I specialize in creating beautiful things for the web.
+                </Title>
+            </motion.div>
+            {/* Call to Action */}
+            <div
+            style={{marginTop: '10px'}}
+            >
+                <Space size="small">
                     <motion.div variants={elementVariant}>
-                        <Title className style={headerTitle}>I'm Jonah,</Title>
+                        <Button href="mailto:jonah_louis@outlook.com">Contact me</Button>   
                     </motion.div>
-                    <motion.div variants={elementVariant}>
-                        <Title level={3} style={subHeaderTitle} type="secondary">
-                            I love to <span style={colorFont}>learn</span> and <span style={colorFont}>build</span> things for the web.
-                        </Title>
-                    </motion.div>
-                    <div
-                    style={{marginTop: '10px'}}
+                    <motion.a 
+                    href="https://github.com/jonahlouis4" 
+                    target="_blank"
+                    variants={elementVariant}
                     >
-                        <Space size="small">
-                            <motion.div variants={elementVariant}>
-                                <Button href="mailto:jonah_louis@outlook.com">Contact me</Button>   
-                            </motion.div>
-                            <motion.a 
-                            href="https://github.com/jonahlouis4" 
-                            target="_blank"
-                            variants={elementVariant}
-                            >
-                                <Button shape="circle" icon={<GithubOutlined />} />
-                            </motion.a>
-                            <motion.a 
-                            href="https://www.linkedin.com/in/jonah-louis-3b71791b8/" 
-                            target="_blank"
-                            variants={elementVariant}
-                            >
-                                <Button shape="circle" icon={<LinkedinOutlined /> } />
-                            </motion.a>
-                        </Space>
-                    </div>
-                </Col>
-                <Col 
-                xl={6} 
-                style={{ margin:'auto'}}
-                className="intro-picture"
-                >
-                    <motion.div variants={elementVariant}>
-                        <Avatar
-                            size={{ xs: 180, sm: 180, md: 180, lg: 180, xl: 220, xxl: 250 }}
-                            src={user}
-                        />
-                    </motion.div>
-                </Col>
-            </Row> 
+                        <Button shape="circle" icon={<GithubOutlined />} />
+                    </motion.a>
+                    <motion.a 
+                    href="https://www.linkedin.com/in/jonah-louis-3b71791b8/" 
+                    target="_blank"
+                    variants={elementVariant}
+                    >
+                        <Button shape="circle" icon={<LinkedinOutlined /> } />
+                    </motion.a>
+                </Space>
+            </div>
+            {/* Picture/Avatar */}
+            <motion.div variants={elementVariant}>
+                <Avatar
+                    size={{ xs: 180, sm: 180, md: 180, lg: 180, xl: 220, xxl: 250 }}
+                    src={user}
+                />
+            </motion.div>
         </motion.div>
     )
 }

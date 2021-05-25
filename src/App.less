@@ -66,7 +66,13 @@ Note: All widths are with correspondance with AntDesign
     #resume-btn-nav {
         margin-top: 20px;
     }
-    
+
+/* 
+======= Introduction.css =======
+*/
+.introduction-container {
+    text-align: center !important;
+}
 
 /* xs */
 @media only screen and (max-width: 576px) {
@@ -80,12 +86,8 @@ Note: All widths are with correspondance with AntDesign
         display: block;
     }
     .introduction-container { 
-        margin: 100px 0 !important; 
-        text-align: center; 
+        margin: 100px 0; 
     }
-        .intro-picture { 
-            padding-top: 50px; 
-        }
     .gridStyle { 
         width: 100%; 
     }
@@ -96,8 +98,9 @@ Note: All widths are with correspondance with AntDesign
     .container {
         max-width: 540px;
     }
-    .introduction-container { margin: 150px 0 !important; text-align: center; }
-        .intro-picture { padding-top: 50px; }
+    .introduction-container { 
+        margin: 100px 0; 
+    }
 }
 
 /* md */
@@ -105,9 +108,10 @@ Note: All widths are with correspondance with AntDesign
     .container {
         max-width: 720px;
     }
+    .introduction-container { 
+        text-align: left;
+    }
     .sideNav-open { width: 0; }
-    #intro-left { padding-right: 10px; }
-    .intro-picture { padding-top: 25px; }
 }
 
 /* lg */
