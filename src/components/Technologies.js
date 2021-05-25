@@ -156,7 +156,7 @@ const Technologies = () => {
 
     return (
         <motion.div
-        style={{margin:'125px 0'}}
+        className="section-container"
         ref={ref}
         animate={controls}
         initial="hidden"

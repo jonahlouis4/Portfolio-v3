@@ -62,7 +62,7 @@ const Projects = () => {
     /** Card format for each project */
     const cardDisplay = projects.map(project => { return (
         <Col 
-        xs={{span:24}} sm={{span:24}} md={{span:11}} lg={{span:11}} xl={{span:7}}
+        xs={{span:24}} sm={{span:24}} md={{span:12}} lg={{span:10}} xl={{span:7}}
         key={project.id}
         >
             <ProjectDisplay 
