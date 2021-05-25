@@ -26,11 +26,6 @@ Note: All widths are with correspondance with AntDesign
 */
     /* Main Container */
     .container { width: 900px; margin: 0 auto;}
-    /* Main Nav bar */
-    .nav-content { 
-        width: 55%;
-        margin: 0 auto;
-    }
         .section-menu { display: none;}
     /* Side Navigation */
     .sideNav-open { width: 250px; }
@@ -41,6 +36,10 @@ Note: All widths are with correspondance with AntDesign
 /* 
 ======= MYHeader.css =======
 */
+    .nav-container { 
+        width: 55%;
+        margin: 0 auto;
+    }
     .sLink {
         margin-left: 25px;
     }
@@ -48,8 +47,9 @@ Note: All widths are with correspondance with AntDesign
 
 /* xs */
 @media only screen and (max-width: 576px) {
-    .container { width: 95%; }
-    .nav-content { width: 95%; }
+    .container {
+        max-width: 100%;
+    }
         .section-sections.sLink { display: none; }
         .section-menu { display: block;}
     .introduction-container { margin: 100px 0 !important; text-align: center; }
@@ -58,9 +58,10 @@ Note: All widths are with correspondance with AntDesign
 }
 
 /* sm */
-@media only screen and (min-width: 577px) and (max-width: 768px) {
-    .container { width: 550px; }
-    .nav-content { width: 550px; }
+@media only screen and (min-width: 576px)  {
+    .container {
+        max-width: 540px;
+    }
         .section-sections.sLink { display: none; }
         .section-menu { display: inline-block; }
     .introduction-container { margin: 150px 0 !important; text-align: center; }
@@ -68,21 +69,35 @@ Note: All widths are with correspondance with AntDesign
 }
 
 /* md */
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-    .container { width: 650px; }
-    .nav-content { width: 650px; }
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
     .sideNav-open { width: 0; }
     #intro-left { padding-right: 10px; }
     .intro-picture { padding-top: 25px; }
 }
 
 /* lg */
-@media only screen and (min-width: 993px) and (max-width: 1200px) {
+@media only screen and (min-width: 992px)  {
+    .container {
+        max-width: 960px;
+    }
     .nav-content { width: 850px; }
     .sideNav-open { width: 0; }
 }
 
 /* xl */
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
     .sideNav-open { width: 0; }
+}
+
+/* xxl */
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
 }
