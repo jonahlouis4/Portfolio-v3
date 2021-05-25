@@ -184,6 +184,7 @@ const Technologies = () => {
                 >
                     <Card
                     style={{marginTop:'50px', cursor:'default'}}
+                    className="tech-card"
                     >
                         <Card.Grid className='gridStyle'>
                             <Title level={5}>Other languages</Title>
