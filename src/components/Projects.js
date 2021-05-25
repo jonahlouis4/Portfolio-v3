@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useInView } from 'react-intersection-observer';
-import ProjectDisplay from './ProjectDisplay'
+import { useInView } from 'react-intersection-observer'; 
 import { motion } from 'framer-motion'
 import { useAnimation } from 'framer-motion';
 
@@ -8,6 +7,10 @@ import Button from 'antd/lib/button';
 import Typography from 'antd/lib/typography';
 import Col from 'antd/lib/col';
 import Row from 'antd/lib/row';
+import GithubFilled from '@ant-design/icons/GithubFilled'
+import SelectOutlined from '@ant-design/icons/SelectOutlined'
+import demo_1 from '../images/project_2.png'
+import demo_2 from '../images/project_1.png'
 
 const { Title } = Typography;
 
@@ -21,7 +24,7 @@ const sectionTitle = {
 
 const projectBtn = {
     textAlign: 'center',
-    marginTop: '1.5rem'
+    marginTop: '2rem'
 }
 
 // Variants
@@ -48,34 +51,6 @@ const elementVariant = {
 
 /** Contains all project information */
 const Projects = () => {
-    /** Usestate of all projects - contains all project information */
-    const [projects] = useState([
-        {id: 1, iconName: "faReact", projectName: "StudyBuddy", 
-            description: "A simple flash card web application designed for studying.", 
-            github: "https://github.com/jonahlouis4/StudyBuddy", url:"https://jonahlouis4.github.io/StudyBuddy/",
-            disabled: false },
-        {id: 2, iconName: "faReact", projectName: "COVID-19 Tracker", 
-            description: "Global scale covid tracker of deaths, cases, and recoveries.",
-            github: "https://github.com/jonahlouis4/COVID19-Tracker", url:"https://covid19-tracker2021.herokuapp.com/", disabled: false },
-    ])
-
-    /** Card format for each project */
-    const cardDisplay = projects.map(project => { return (
-        <Col 
-        xs={{span:24}} sm={{span:24}} md={{span:12}} lg={{span:10}} xl={{span:7}}
-        key={project.id}
-        >
-            <ProjectDisplay 
-            iconName={project.iconName} 
-            projectName={project.projectName}
-            description={project.description}
-            github={project.github}
-            url={project.url}
-            disabled={project.disabled}
-            />
-        </Col>
-    )})
-
     /** Framer motion animateControl */
     const controls = useAnimation();
     /** useInView - determines when a componenent is in view */
@@ -83,10 +58,70 @@ const Projects = () => {
     
     /** Set the variant to 'visible' if it's in view */
     useEffect(() => {
-      if (inView) {
+        if (inView) {
         controls.start("visible");
-      }
+        }
     }, [controls, inView]);
+
+    /** Usestate of all projects - contains all project information */
+    const [projects] = useState([
+        {id: 1, iconName: "faReact", projectName: "StudyBuddy", 
+            description: "A simple flash card web application designed for studying. Contains the ability to add an extensive range of questions and includes a randomized order for every quiz.", 
+            github: "https://github.com/jonahlouis4/StudyBuddy", url:"https://jonahlouis4.github.io/StudyBuddy/",
+            disabled: false },
+        {id: 2, iconName: "faReact", projectName: "COVID-19 Tracker", 
+            description: "Global scale covid tracker of deaths, cases, and recoveries using a COVID API. Includes sorted charts and wide variety of Countries.",
+            github: "https://github.com/jonahlouis4/COVID19-Tracker", url:"https://covid19-tracker2021.herokuapp.com/", disabled: false },
+    ])
+
+    /** Project format for each individual project */
+    const ProjectDisplay = props => (
+        <div>
+            <a
+            href={props.link}
+            target="_blank"
+            rel="noreferrer"
+            whileHover={{ scale: 1.1 }}
+            >
+                <motion.img 
+                src={props.demo} 
+                alt={props.description} 
+                className="project-image"
+                whileHover={{scale: 1.1}}
+                />
+            </a>
+            <div
+            style={{textAlign:'center'}}
+            >
+                <Title
+                level={4}
+                style={{marginTop: '1.5rem'}}
+                >
+                    { props.name }
+                </Title>
+                <p
+                style={{fontSize:'20px', marginBottom: '3px'}}
+                >
+                    {props.description}
+                </p>
+                <a
+                href={props.github}
+                target="_blank"
+                rel="noreferrer"
+                >
+                    <Button type="link" style={{marginRight:'0.5rem'}} icon={<GithubFilled/>} >Github </Button>
+                </a>
+                <a
+                href={props.url}
+                target="_blank"
+                rel="noreferrer"
+                >
+                    <Button type="link" style={{marginRight:'0.5rem'}} icon={<SelectOutlined />} >Website </Button>
+                </a>
+
+            </div>
+        </div>
+    )
 
     return (
         <motion.div
@@ -102,16 +137,48 @@ const Projects = () => {
             >
                 <Title style={sectionTitle}>My <span style={{fontWeight: '500'}}>Projects</span></Title>
             </motion.div>
-            <motion.div
+            {/* Projects */}
+            <div
             style={{paddingTop: '75px'}}
-            variants={elementVariant}
             >
                 <Row 
                 justify="center"
                 gutter={[48, 48]}
                 >
-                    {/* Display all cards */}
-                    {cardDisplay}
+                    <Col
+                    md={24} lg={12} xl={12}
+                    >
+                        {/* Project 1 (Study Buddy) */}
+                        <motion.div
+                        variants={elementVariant}
+                        >
+                            <ProjectDisplay 
+                                demo={ demo_1 }
+                                link={ projects[0].url }
+                                name={ projects[0].projectName }
+                                description={ projects[0].description }
+                                github={ projects[0].github }
+                                url={ projects[0].url }
+                            />
+                        </motion.div>
+                    </Col>
+                    <Col
+                    md={24} lg={12} xl={12}
+                    >
+                        {/* Project 2 (COVID Tracker) */}
+                        <motion.div
+                        variants={elementVariant}
+                        >
+                            <ProjectDisplay 
+                                demo={ demo_2 }
+                                link={ projects[1].url }
+                                name={ projects[1].projectName }
+                                description={ projects[1].description }
+                                github={ projects[1].github }
+                                url={ projects[1].url }
+                            />
+                        </motion.div>
+                    </Col>
                 </Row>
                 <motion.div
                 variants={elementVariant}
@@ -127,7 +194,7 @@ const Projects = () => {
                       </a>
                     </Button>  
                 </motion.div>
-            </motion.div>
+            </div>
         </motion.div>
     )
 }
