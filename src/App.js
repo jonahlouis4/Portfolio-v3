@@ -53,19 +53,23 @@ function App() {
         </Header>
         <Content>
           {/* Section - Introduction */}
-          <div className="container">
-            <Introduction />
+          <div className="container-bg-0">
+            <div
+            className="container"
+            >
+              <Introduction />
             </div>
-            {/* Section - Projects */}
-            <div className="container-bg-1" id={sectionLink.section1}>
-              <div className="container">
-                <Projects />
-              </div>
+          </div>
+          {/* Section - Projects */}
+          <div className="container-bg-1" id={sectionLink.section1}>
+            <div className="container">
+              <Projects />
             </div>
-            {/* Section - Technologies */}
-            <div className="container" id={sectionLink.section2}>
-              <Technologies />
-            </div>
+          </div>
+          {/* Section - Technologies */}
+          <div className="container" id={sectionLink.section2}>
+            <Technologies />
+          </div>
         </Content>
         <Footer className="container-bg-2">
           <div className="container">
