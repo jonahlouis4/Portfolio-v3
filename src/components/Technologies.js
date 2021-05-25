@@ -166,7 +166,7 @@ const Technologies = () => {
             style={{textAlign:'center'}}
             variants={titleVariant}
             >
-                <Title style={sectionTitle}><span style={{fontWeight: '500'}}>Technologies</span> I've been working with.</Title>
+                <Title style={sectionTitle}>My <span style={{fontWeight: '500'}}>Technologies</span></Title>
             </motion.div>
             <div
             style={{paddingTop:'75px'}}
