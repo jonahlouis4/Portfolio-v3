@@ -12,7 +12,6 @@ All **main** colours are from [Ant Design](https://ant.design/docs/spec/colors).
 
 | Colours	     | Code																	   |
 |----------------|-------------------------------------------------------------------------|
-| blue-6 (main)  |![#1890ff](https://via.placeholder.com/15/1890ff/000000?text=+) `#1890ff`|
-| blue-7		 |![#096dd9](https://via.placeholder.com/15/096dd9/000000?text=+) `#096dd9`|
+| geekblue-6 (main)  |![#2f54eb](https://via.placeholder.com/15/2f54eb/000000?text=+) `#2f54eb`|
 | black	(footer) |![#1f1f1f](https://via.placeholder.com/15/1f1f1f/000000?text=+) `#1f1f1f`|
 | black (logos)	 |![#434343](https://via.placeholder.com/15/434343/000000?text=+) `#434343`|
