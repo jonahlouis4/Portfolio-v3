@@ -85,7 +85,6 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
 
     return (
         <motion.div 
-        style={navContainer}
         initial="hidden"
         animate="visible"
         variants={contVariant}
