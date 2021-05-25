@@ -43,7 +43,7 @@ const Introduction = () => {
             <motion.div 
             variants={elementVariant}
             >
-                <Title className="intro-header">Full-stack web developer.</Title>
+                <Title className="intro-header">Front-end web developer.</Title>
             </motion.div>
             {/* SubHeader */}
             <motion.div 
