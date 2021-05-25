@@ -56,6 +56,7 @@ const Introduction = () => {
         initial="hidden"
         animate="visible"
         variants={contVariant}
+        style={{border:'1px solid red'}}
         >
             <Row>
                 <Col 

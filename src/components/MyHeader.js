@@ -64,7 +64,7 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
         initial="hidden"
         animate="visible"
         variants={contVariant}
-        className="nav-container"
+        className="container nav-container"
         >
             <motion.a href="/" style={homeLink} variants={sectionVariant}><img src={logo} width='40' alt="Jonah's logo"/></motion.a>
             <div
