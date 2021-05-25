@@ -78,7 +78,7 @@ function App() {
             <Technologies />
           </div>
         </Content>
-        <Footer className="container-bg-2">
+        <Footer className="container-bg-3">
           <div className="container">
             <MyFooter />
           </div>
