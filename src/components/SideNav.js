@@ -1,6 +1,6 @@
 import React from 'react'
-import './SideNav.css'
-import Resume from '../files/Jonah-Resume.pdf'
+import '../css/SideNav.css'
+import Resume from '../files/Jonah_Louis_Resume.pdf'
 
 import Typography from 'antd/lib/typography'
 import Button from 'antd/lib/button'

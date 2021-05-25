@@ -1,6 +1,6 @@
 import React from 'react'
-import './Header.css'
-import Resume from '../files/Jonah-Resume.pdf'
+import '../css/Header.css'
+import Resume from '../files/Jonah_Louis_Resume.pdf'
 
 import { motion } from "framer-motion"
 import Button from 'antd/lib/button'

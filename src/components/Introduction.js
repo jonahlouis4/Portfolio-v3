@@ -28,7 +28,7 @@ const subHeaderTitle = {
 }
 
 const colorFont = {
-    color: '#1890ff',
+    color: '#2f54eb',
     fontWeight: '500'
 }
 

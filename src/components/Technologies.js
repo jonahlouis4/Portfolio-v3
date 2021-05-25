@@ -29,7 +29,7 @@ const logoColorDefault = {
 }
 
 const carretColor = {
-    color: '#1890ff'
+    color: '#2f54eb'
 }
 
 // Variants
