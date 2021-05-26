@@ -1,14 +1,13 @@
-import react from 'react'
-import { BrowserRouter as Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import PageNotFound from './pages/PageNotFound'
 import './App.less'
 
 function App() {
   return (
     <Switch>
-      <Route exact pathj="/">
-        <Home />
-      </Route>
+      <Route exact path="/" component={Home}/>
+      <Route component={PageNotFound} />
     </Switch>
   );
 }
