@@ -94,7 +94,6 @@ const Contribution = () => {
                         >
                             <img src={Showcase} className="contri-image" alt="Caremade - Task List Manager by It Compiles"/>
                         </motion.div>
-                        
                     </Col>
                     <Col
                     xl={12}
