@@ -69,7 +69,7 @@ const Projects = () => {
             description: "A simple flash card web application designed for studying. Ability to add an extensive range of questions and includes a randomized order for each quiz.", 
             github: "https://github.com/jonahlouis4/StudyBuddy", url:"https://jonahlouis4.github.io/StudyBuddy/"},
         {id: 2, projectName: "COVID-19 Tracker", 
-            description: "Global scale covid tracker of deaths, cases, and recoveries using a COVID API. Includes sorted charts, and summaries from a wide variety of Countries.",
+            description: "Global scale covid tracker of deaths, cases, and recoveries using a COVID API. Includes sorted charts and summaries from a wide variety of Countries.",
             github: "https://github.com/jonahlouis4/COVID19-Tracker", url:"https://covid19-tracker2021.herokuapp.com/"},
     ])
 
