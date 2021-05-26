@@ -50,7 +50,7 @@ const PageNotFound = () => {
                         <Title
                         style={messageHeader}
                         >
-                            Ooops! The page you're looking for doesn't exists.
+                            Ooops! The page you're looking for doesn't exist.
                         </Title>
                         <Link to="/">
                             <Button size="large" type="primary">
