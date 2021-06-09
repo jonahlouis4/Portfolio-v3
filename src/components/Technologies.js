@@ -108,7 +108,7 @@ const Technologies = () => {
             >
                 <Row
                 justify="center"
-                gutter={16}
+                gutter={[16, 48]}
                 >
                     <Col 
                     xs={{ span:24 }} lg={{ span:10 }}
