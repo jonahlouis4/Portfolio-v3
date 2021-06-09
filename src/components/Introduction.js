@@ -5,7 +5,7 @@ import Typography from 'antd/lib/typography'
 import Button from 'antd/lib/button'
 import Avatar from 'antd/lib/avatar'
 import Space from 'antd/lib/space'
-import user from '../images/jonah-2.jpg'
+import user from '../images/jonah-2-min.jpg'
 
 const { Title } = Typography;
 
