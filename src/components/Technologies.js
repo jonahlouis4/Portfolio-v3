@@ -73,9 +73,8 @@ const Technologies = () => {
     }, [controls, inView]);
 
     const TechDisplay = props => (
-        <motion.div
+        <div
         style={{display:'block'}}
-        variants={elementVariant}
         >
             <RightOutlined 
             style={carret}
@@ -86,7 +85,7 @@ const Technologies = () => {
                 { props.tech }
             </p>
             <Divider />
-        </motion.div>
+        </div>
     )
 
     return (
@@ -113,26 +112,26 @@ const Technologies = () => {
                     <Col 
                     xs={{ span:24 }} lg={{ span:10 }}
                     >
-                        <Title level={3} style={subTitle}>Languages</Title>
-                        <TechDisplay tech="HTML"/>
-                        <TechDisplay tech="CSS"/>
-                        <TechDisplay tech="JavaScript"/>
-                        <TechDisplay tech="PHP"/>
-                        <TechDisplay tech="Java"/>
-                        <TechDisplay tech="C"/>
-                        <TechDisplay tech="C++"/>
+                        <motion.div variants={elementVariant}><Title level={3} style={subTitle}>Languages</Title></motion.div>
+                        <motion.div variants={elementVariant}><TechDisplay tech="HTML"/></motion.div>
+                        <motion.div variants={elementVariant}><TechDisplay tech="CSS"/></motion.div>
+                        <motion.div variants={elementVariant}><TechDisplay tech="JavaScript"/></motion.div>
+                        <motion.div variants={elementVariant}><TechDisplay tech="PHP"/></motion.div>
+                        <motion.div variants={elementVariant}><TechDisplay tech="Java"/></motion.div>
+                        <motion.div variants={elementVariant}><TechDisplay tech="C"/></motion.div>
+                        <motion.div variants={elementVariant}><TechDisplay tech="C++"/></motion.div>
                     </Col>
                     <Col 
                     xs={{ span:24 }} lg={{ span:10 }}
                     >
-                        <Title level={3} style={subTitle}>Frameworks & Libraries</Title>
-                        <TechDisplay tech="React JS"/>
-                        <TechDisplay tech="React Native"/>
-                        <TechDisplay tech="Angular"/>
-                        <TechDisplay tech="Gatsby"/>
-                        <TechDisplay tech="Ionic"/>
-                        <TechDisplay tech="Bootstrap"/>
-                        <TechDisplay tech="Ant Design"/>
+                        <motion.div variants={elementVariant}><Title level={3} style={subTitle}>Frameworks & Libraries</Title></motion.div>
+                        <motion.div variants={elementVariant}><TechDisplay tech="React JS"/></motion.div>
+                        <motion.div variants={elementVariant}><TechDisplay tech="React Native"/></motion.div>
+                        <motion.div variants={elementVariant}><TechDisplay tech="Angular"/></motion.div>
+                        <motion.div variants={elementVariant}><TechDisplay tech="Gatsby"/></motion.div>
+                        <motion.div variants={elementVariant}><TechDisplay tech="Ionic"/></motion.div>
+                        <motion.div variants={elementVariant}><TechDisplay tech="Bootstrap"/></motion.div>
+                        <motion.div variants={elementVariant}><TechDisplay tech="Ant Design"/></motion.div>
                     </Col>
                 </Row>
             </div>
