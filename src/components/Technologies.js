@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer';
-
 import Typography from 'antd/lib/typography';
 import Col from 'antd/lib/col';
 import Row from 'antd/lib/row';
@@ -9,7 +8,7 @@ import { motion } from 'framer-motion'
 import { useAnimation } from 'framer-motion';
 import RightOutlined from '@ant-design/icons/RightOutlined'
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 // Styles
 const sectionTitle = {
@@ -100,7 +99,9 @@ const Technologies = () => {
             style={{textAlign:'center'}}
             variants={titleVariant}
             >
-                <Title style={sectionTitle}>My Latest <span style={{fontWeight: '500'}}>Technologies</span></Title>
+                <Title style={sectionTitle}>
+                    My Latest <span style={{fontWeight: '500'}}>Technologies</span>
+                </Title>
             </motion.div>
             <div
             style={{paddingTop:'75px'}}
