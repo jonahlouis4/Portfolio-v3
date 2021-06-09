@@ -20,7 +20,8 @@ const sectionTitle = {
 }
 
 const subTitle = {
-    textAlign: 'center'
+    textAlign: 'center',
+    marginBottom: '2rem'
 }
 
 const mainText = {
@@ -28,10 +29,6 @@ const mainText = {
     margin: '0.8rem 0',
     paddingLeft: '5px',
     display: 'inline'
-}
-
-const logoColorDefault = {
-    color:'#434343'
 }
 
 const carret = {
