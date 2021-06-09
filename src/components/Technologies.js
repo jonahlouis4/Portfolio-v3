@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer';
 
 import Typography from 'antd/lib/typography';
 import Col from 'antd/lib/col';
 import Row from 'antd/lib/row';
-import Card from 'antd/lib/card';
+import Divider from 'antd/lib/divider';
 import { motion } from 'framer-motion'
 import { useAnimation } from 'framer-motion';
-import { faJsSquare } from '@fortawesome/free-brands-svg-icons/faJsSquare'
-import { faWordpress } from '@fortawesome/free-brands-svg-icons/faWordpress'
-import { faBootstrap } from '@fortawesome/free-brands-svg-icons/faBootstrap'
-import { CaretRightOutlined } from '@ant-design/icons'
+import RightOutlined from '@ant-design/icons/RightOutlined'
 
 const { Title, Text } = Typography;
 
@@ -26,11 +23,19 @@ const subTitle = {
     textAlign: 'center'
 }
 
+const mainText = {
+    fontSize: '20px',
+    margin: '0.8rem 0',
+    paddingLeft: '5px',
+    display: 'inline'
+}
+
 const logoColorDefault = {
     color:'#434343'
 }
 
-const carretColor = {
+const carret = {
+    fontSize: '15px',
     color: '#2f54eb'
 }
 
@@ -77,6 +82,22 @@ const Technologies = () => {
         }
     }, [controls, inView]);
 
+    const TechDisplay = props => (
+        <div
+        style={{display:'block'}}
+        >
+            <RightOutlined 
+            style={carret}
+            />
+            <p
+            style={mainText}
+            >
+                { props.tech }
+            </p>
+            <Divider />
+        </div>
+    )
+
     return (
         <motion.div
         className="section-container"
@@ -96,16 +117,31 @@ const Technologies = () => {
             >
                 <Row
                 justify="center"
+                gutter={16}
                 >
                     <Col 
-                    xs={{ span:24 }} lg={{ span:12 }}
+                    xs={{ span:24 }} lg={{ span:10 }}
                     >
                         <Title level={3} style={subTitle}>Languages</Title>
+                        <TechDisplay tech="HTML"/>
+                        <TechDisplay tech="CSS"/>
+                        <TechDisplay tech="JavaScript"/>
+                        <TechDisplay tech="PHP"/>
+                        <TechDisplay tech="Java"/>
+                        <TechDisplay tech="C"/>
+                        <TechDisplay tech="C++"/>
                     </Col>
                     <Col 
-                    xs={{ span:24 }} lg={{ span:12 }}
+                    xs={{ span:24 }} lg={{ span:10 }}
                     >
-                        <Title level={3} style={subTitle}>Frameworks</Title>
+                        <Title level={3} style={subTitle}>Frameworks & Libraries</Title>
+                        <TechDisplay tech="React JS"/>
+                        <TechDisplay tech="React Native"/>
+                        <TechDisplay tech="Angular"/>
+                        <TechDisplay tech="Gatsby"/>
+                        <TechDisplay tech="Ionic"/>
+                        <TechDisplay tech="Bootstrap"/>
+                        <TechDisplay tech="Ant Design"/>
                     </Col>
                 </Row>
             </div>
