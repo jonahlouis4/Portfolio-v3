@@ -51,18 +51,11 @@ const titleVariant = {
     hidden: { opacity:0 }
 }
 
-const logoVariant = {
-    visible: { opacity: 1, scale: 1,
-        transition: { duration: 0.5 }
-    },
-    hidden: { opacity:0, scale: 0 }
-}
-
 const elementVariant = {
     visible: { opacity: 1, scale: 1,
         transition: { duration: 0.5 }
     },
-    hidden: { opacity:0, scale: 0.9 }
+    hidden: { opacity:0, scale: 0.5 }
 }
 
 /** Returns formatted display of technologies */
@@ -80,8 +73,9 @@ const Technologies = () => {
     }, [controls, inView]);
 
     const TechDisplay = props => (
-        <div
+        <motion.div
         style={{display:'block'}}
+        variants={elementVariant}
         >
             <RightOutlined 
             style={carret}
@@ -92,7 +86,7 @@ const Technologies = () => {
                 { props.tech }
             </p>
             <Divider />
-        </div>
+        </motion.div>
     )
 
     return (
