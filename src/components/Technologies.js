@@ -3,7 +3,6 @@ import Typography from 'antd/lib/typography';
 import Col from 'antd/lib/col';
 import Row from 'antd/lib/row';
 import Divider from 'antd/lib/divider';
-import { motion } from 'framer-motion'
 import RightOutlined from '@ant-design/icons/RightOutlined'
 
 const { Title } = Typography;
