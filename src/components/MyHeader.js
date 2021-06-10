@@ -1,25 +1,9 @@
 import React from 'react'
 import Resume from '../files/Jonah_Louis_Resume.pdf'
-
-import { motion } from "framer-motion"
 import Menu from 'antd/lib/menu'
 import Button from 'antd/lib/button'
 import MenuOutlined from '@ant-design/icons/MenuOutlined'
 import logo from '../images/_Logo.svg'
-
-// Variants
-const contVariant = {
-    visible: { 
-        opacity: 1, y: 0, 
-        transition: { duration:0.5, when:"beforeChildren", staggerChildren:0.2 }, 
-    },
-    hidden: { opacity: 0, y: -100 },
-}
-
-const sectionVariant = {
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-    hidden: { opacity: 0, y: -50 }
-}
 
 /**
  * Header component for the website
@@ -39,37 +23,34 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
     }
 
     return (
-        <motion.div 
-        initial="hidden"
-        animate="visible"
-        variants={contVariant}
+        <div 
         className="container nav-container"
         >
             <Menu mode="horizontal" >
                 {/* logo */}
-                <motion.a href="/" className="home-icon" variants={sectionVariant}>
+                <a href="/" className="home-icon">
                     <img src={logo} width='40' alt="Jonah's logo"/>
-                    </motion.a>
+                </a>
                 {/* Hamburger */}
                 <MenuOutlined style={{float:'right'}} className="section-menu menu-icon" onClick={navControl}/>
                 {/* Resume btn */}
-                <motion.a style={{float:'right'}} className="section-link" variants={sectionVariant} href={Resume} target="_blank" rel='noopener noreferrer'>
+                <a style={{float:'right'}} className="section-link" href={Resume} target="_blank" rel='noopener noreferrer'>
                     <Button type="primary">{ sectionName.section3 }</Button>
-                </motion.a>
+                </a>
                 {/* Section 2 */}
                 <Menu.Item key="2" style={{float:'right'}} className="section-link">
-                    <motion.a variants={sectionVariant} href={'#'+sectionLink.section2}>{ sectionName.section2 }</motion.a>
+                    <a  href={'#'+sectionLink.section2}>{ sectionName.section2 }</a>
                     </Menu.Item>
                 {/* Section 1 */}
                 <Menu.Item key="3" style={{float:'right'}} className="section-link">
-                    <motion.a variants={sectionVariant} href={'#'+sectionLink.section1}>{ sectionName.section1 }</motion.a>
+                    <a href={'#'+sectionLink.section1}>{ sectionName.section1 }</a>
                 </Menu.Item>
                 {/* Section 0 */}
                 <Menu.Item key="4" style={{float:'right'}} className="section-link">
-                    <motion.a variants={sectionVariant} href={'#'+sectionLink.section0}>{ sectionName.section0 }</motion.a>
+                    <a href={'#'+sectionLink.section0}>{ sectionName.section0 }</a>
                 </Menu.Item>
             </Menu>
-        </motion.div>
+        </div>
     )
 }
 

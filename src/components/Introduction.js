@@ -1,6 +1,4 @@
 import React from 'react'
-
-import { motion } from 'framer-motion'
 import Typography from 'antd/lib/typography'
 import Button from 'antd/lib/button'
 import Avatar from 'antd/lib/avatar'
@@ -15,64 +13,33 @@ const subHeaderTitle = {
     marginBottom: '18px'
 }
 
-// Variants
-const contVariant = {
-    visible: { opacity: 1,
-        transition: { delay:1, when:"beforeChildren", staggerChildren: 0.2 },
-    },
-    hidden: { opacity: 0 }
-}
-
-const elementVariant = {
-    visible: { opacity: 1, x: 0,
-        transition: { duration: 0.5 },
-    },
-    hidden: { x: -40, opacity: 0 }
-}
-
 /** Introduction component - contains the introduction */
 const Introduction = () => {
     return (
-        <motion.div
-        className="introduction-container section-container"
-        initial="hidden"
-        animate="visible"
-        variants={contVariant}        
+        <div
+        className="introduction-container section-container"   
         >
             {/* Header */}
-            <motion.div 
-            variants={elementVariant}
-            >
-                <Title className="intro-header">Front-end web developer.</Title>
-            </motion.div>
+            <Title className="intro-header">Front-end web developer.</Title>
             {/* SubHeader */}
-            <motion.div 
-            variants={elementVariant}
+            <Title 
+            level={3} 
+            style={subHeaderTitle} 
+            type="secondary"
             >
-                <Title 
-                level={3} 
-                style={subHeaderTitle} 
-                type="secondary"
-                >
-                    I specialize in creating beautiful things for the web, & just love what I do.
-                </Title>
-            </motion.div>
+                I specialize in creating beautiful things for the web, & just love what I do.
+            </Title>
             {/* Call to Action */}
             <div
             >
                 <Space 
                 size="middle"
                 >
-                    <motion.div 
-                    variants={elementVariant}
-                    >
-                        <Button href="mailto:jonah_louis@outlook.com" size="large" >Get In Touch</Button>   
-                    </motion.div>
+                <Button href="mailto:jonah_louis@outlook.com" size="large" >Get In Touch</Button>   
                 </Space>
             </div>
             {/* Picture/Avatar */}
-            <motion.div 
-            variants={elementVariant}
+            <div 
             className="intro-avatar-container"
             >
                 <Avatar
@@ -80,8 +47,8 @@ const Introduction = () => {
                     src={user}
                     id="intro-avatar"
                 />
-            </motion.div>
-        </motion.div>
+            </div>
+        </div>
     )
 }
 
