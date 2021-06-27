@@ -20,7 +20,7 @@ const Introduction = () => {
         className="introduction-container section-container"   
         >
             {/* Header */}
-            <Title className="intro-header">Front-end web developer.</Title>
+            <Title className="intro-header">Full stack web developer.</Title>
             {/* SubHeader */}
             <Title 
             level={3} 
