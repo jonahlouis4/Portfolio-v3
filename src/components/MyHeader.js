@@ -1,6 +1,5 @@
 import React from 'react'
 import Resume from '../files/Jonah_Louis_Resume.pdf'
-import Menu from 'antd/lib/menu'
 import Button from 'antd/lib/button'
 import MenuOutlined from '@ant-design/icons/MenuOutlined'
 import logo from '../images/_Logo.svg'
