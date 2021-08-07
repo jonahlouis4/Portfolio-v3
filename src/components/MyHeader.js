@@ -26,30 +26,31 @@ const MyHeader = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
         <div 
         className="container nav-container"
         >
-            <Menu mode="horizontal" >
-                {/* logo */}
-                <a href="/" className="home-icon">
-                    <img src={logo} width='40' alt="Jonah's logo"/>
-                </a>
-                {/* Hamburger */}
-                <MenuOutlined style={{float:'right'}} className="section-menu menu-icon" onClick={navControl}/>
-                {/* Resume btn */}
-                <a style={{float:'right'}} className="section-link" href={Resume} target="_blank" rel='noopener noreferrer'>
-                    <Button type="primary">{ sectionName.section3 }</Button>
-                </a>
+            {/* logo */}
+            <a href="/" className="home-icon">
+                <img src={logo} width='40' alt="Jonah's logo"/>
+            </a>
+            {/* Hamburger */}
+            <MenuOutlined style={{float:'right'}} className="section-menu menu-icon" onClick={navControl}/>
+            {/* Resume btn */}
+            <a style={{float:'right'}} className="section-link" href={Resume} target="_blank" rel='noopener noreferrer'>
+                <Button type="primary">{ sectionName.section3 }</Button>
+            </a>
+            {/* Sections */}
+            <div style={{float:'right'}}>
                 {/* Section 2 */}
-                <Menu.Item key="2" style={{float:'right'}} className="section-link">
-                    <a  href={'#'+sectionLink.section2}>{ sectionName.section2 }</a>
-                    </Menu.Item>
+                <a href={'#'+sectionLink.section2} className="section-link header-sections">
+                    { sectionName.section2 }
+                </a>
                 {/* Section 1 */}
-                <Menu.Item key="3" style={{float:'right'}} className="section-link">
-                    <a href={'#'+sectionLink.section1}>{ sectionName.section1 }</a>
-                </Menu.Item>
+                <a href={'#'+sectionLink.section1} className="section-link header-sections">
+                    { sectionName.section1 }
+                </a>
                 {/* Section 0 */}
-                <Menu.Item key="4" style={{float:'right'}} className="section-link">
-                    <a href={'#'+sectionLink.section0}>{ sectionName.section0 }</a>
-                </Menu.Item>
-            </Menu>
+                <a href={'#'+sectionLink.section0} className="section-link header-sections">
+                    { sectionName.section0 }
+                </a>
+            </div>
         </div>
     )
 }
