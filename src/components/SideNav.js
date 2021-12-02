@@ -53,11 +53,24 @@ const SideNav = ({isOpen, sideNavControl, sectionName, sectionLink}) => {
     }
 
     return (
-        <div style={sideNavStyle} className={isOpen ? navOpenClass : navCloseClass}>
-            <CloseOutlined style={closeBtn} onClick={navControl} className="options"/>
-            <a href={'#'+sectionLink.section0}><Text type="secondary" className="options">{sectionName.section0}</Text></a>
-            <a href={'#'+sectionLink.section1}><Text type="secondary" className="options">{sectionName.section1}</Text></a>
-            <a href={'#'+sectionLink.section2}><Text type="secondary" className="options">{sectionName.section2}</Text></a>
+        <div 
+          style={sideNavStyle} 
+          className={isOpen ? navOpenClass : navCloseClass}
+        >
+            <CloseOutlined 
+             style={closeBtn} 
+             onClick={navControl} 
+             className="options"
+            />
+            <a href={'#'+sectionLink.section0} onClick={navControl} >
+                <Text type="secondary" className="options">{sectionName.section0}</Text>
+            </a>
+            <a href={'#'+sectionLink.section1} onClick={navControl} >
+                <Text type="secondary" className="options">{sectionName.section1}</Text>
+            </a>
+            <a href={'#'+sectionLink.section2} onClick={navControl} >
+                <Text type="secondary" className="options">{sectionName.section2}</Text>
+            </a>
             <a href={Resume} target="_blank" rel='noopener noreferrer'>
                 <Button id="option-btn" size="large">{sectionName.section3}</Button>
             </a>
