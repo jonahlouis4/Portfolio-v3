@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://jonahlouis.ca/">jonahlouis.ca - V3</a></h1>
+<h1 align="center"><a href="https://jonahlouis-v3.netlify.app/">jonahlouis.ca - V3</a></h1>
 <p align="center">Third version of my <b>portfolio</b> made with <a href="https://ant.design/" target="_blank">Ant Design</a> & <a href="https://reactjs.org/docs/hooks-overview.html" target="_blank">React</a>.</p>
 <div align="center"><img src="src/images/demo2.png" width="95%" height="95%"></div>
 
